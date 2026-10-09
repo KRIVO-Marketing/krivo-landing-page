@@ -1,5 +1,6 @@
 import { About } from "@/components/About";
 import { Footer } from "@/components/Footer";
+import { GradualBlur } from "@/components/GradualBlur";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { Method } from "@/components/Method";
@@ -21,6 +22,7 @@ export default function Home() {
         <Projects />
       </main>
       <Footer />
+      <GradualBlur />
     </div>
   );
 }

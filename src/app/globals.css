@@ -40,3 +40,11 @@
     color: #626f94;
   }
 }
+
+@layer utilities {
+  .gradual-blur-1 { -webkit-mask: linear-gradient(to bottom, transparent 0%, black 20%, black 40%, transparent 60%); mask: linear-gradient(to bottom, transparent 0%, black 20%, black 40%, transparent 60%); }
+  .gradual-blur-2 { -webkit-mask: linear-gradient(to bottom, transparent 20%, black 40%, black 60%, transparent 80%); mask: linear-gradient(to bottom, transparent 20%, black 40%, black 60%, transparent 80%); }
+  .gradual-blur-3 { -webkit-mask: linear-gradient(to bottom, transparent 40%, black 60%, black 80%, transparent 100%); mask: linear-gradient(to bottom, transparent 40%, black 60%, black 80%, transparent 100%); }
+  .gradual-blur-4 { -webkit-mask: linear-gradient(to bottom, transparent 60%, black 80%, black 100%); mask: linear-gradient(to bottom, transparent 60%, black 80%, black 100%); }
+  .gradual-blur-5 { -webkit-mask: linear-gradient(to bottom, transparent 80%, black 100%); mask: linear-gradient(to bottom, transparent 80%, black 100%); }
+}
