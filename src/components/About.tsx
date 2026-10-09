@@ -31,6 +31,7 @@ export function About() {
             width={1410}
             height={1316}
             unoptimized
+            fetchPriority="low"
             className="block h-auto w-full"
           />
         </div>

@@ -3,6 +3,7 @@ import { Channels } from "@/components/Channels";
 import { Footer } from "@/components/Footer";
 import { GradualBlur } from "@/components/GradualBlur";
 import { Hero } from "@/components/Hero";
+import { LazyBackgrounds } from "@/components/LazyBackgrounds";
 import { Method } from "@/components/Method";
 import { Services } from "@/components/Services";
 
@@ -22,6 +23,7 @@ export default function Home() {
       </main>
       <Footer />
       <GradualBlur />
+      <LazyBackgrounds />
     </div>
   );
 }
