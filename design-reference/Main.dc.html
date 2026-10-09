@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>KRIVO — Home</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&amp;family=Lexend:wght@300;400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#223862;text-decoration:none}
+a:hover{color:#626f94}
+.kv-hero{background:#22386b url(./assets/9edd70f795671ec068f187d1dccf25f4.webp) center / cover no-repeat}
+.kv-close{background:#22386b url(./assets/aef24cfa93ed4196cb0a460fce7b5030.webp) center / cover no-repeat}
+.kv-light{background:#f1f3fb url(./assets/89f861896dbcfab186ea1f811fa3d1b2.webp) left center / cover no-repeat}
+.kv-cover-a{background:#22386b url(./assets/9edd70f795671ec068f187d1dccf25f4.webp) left top / cover no-repeat}
+.kv-cover-b{background:#f1f3fb url(./assets/89f861896dbcfab186ea1f811fa3d1b2.webp) 58% center / cover no-repeat}
+.kv-cover-c{background:#22386b url(./assets/aef24cfa93ed4196cb0a460fce7b5030.webp) right top / cover no-repeat}
+.kv-navlink{color:#ffffff;opacity:.9;transition:opacity .2s ease}
+.kv-navlink:hover{color:#ffffff;opacity:1}
+.kv-pill{transition:transform .25s ease, background-color .25s ease}
+.kv-pill:hover{transform:translateY(-2px)}
+.kv-pill-light{color:#223862}
+.kv-pill-light:hover{color:#223862;background-color:#eef1f9}
+.kv-pill-ghost{color:#ffffff}
+.kv-pill-ghost:hover{color:#ffffff;background-color:rgba(26,44,85,.85)}
+.kv-pill-dark{color:#ffffff}
+.kv-pill-dark:hover{color:#ffffff;background-color:#1a2c50}
+.kv-row{color:#223862;transition:background-color .25s ease}
+.kv-row:hover{color:#223862;background-color:#f4f6fb}
+.kv-row-arrow{transition:transform .25s ease}
+.kv-row:hover .kv-row-arrow{transform:translateX(6px)}
+.kv-footlink{color:#ffffff;opacity:.9}
+.kv-footlink:hover{color:#ffffff;opacity:1}
+@keyframes kv-marquee{to{transform:translateX(-50%)}}
+.kv-marquee{animation:kv-marquee 48s linear infinite}
+@media (max-width:760px){.kv-navlinks{display:none !important}.kv-row-arrow{display:none !important}.kv-hero{background-position:12% center}.kv-close{background-position:left bottom}.kv-light{background-position:30% center}}
+@media (prefers-reduced-motion:reduce){.kv-marquee{animation:none}}
+</style>
+</helmet>
+<div id="topo" style="background: #ffffff; color: #223862; font-family: 'Albert Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.55; overflow-x: hidden; -webkit-font-smoothing: antialiased">
+
+<header style="padding: 12px">
+<div class="kv-hero" style="border-radius: 28px; min-height: clamp(640px, 56vw, 840px); box-sizing: border-box; padding: clamp(20px, 2.6vw, 36px); display: flex; flex-direction: column; justify-content: space-between; gap: 72px; color: #ffffff">
+<nav aria-label="Principal" style="display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a href="#topo" aria-label="KRIVO, início" style="display: flex; align-items: center; min-height: 44px"><img src="./assets/a55b48b5ef40ca914ec38b902b416032.svg" alt="KRIVO" style="height: 26px; width: auto; display: block"></a>
+<div class="kv-navlinks" style="display: flex; align-items: center; gap: 40px; font-size: 15px; font-weight: 500; text-shadow: 0 0 2px #22386b, 0 0 12px #22386b, 0 0 20px #22386b">
+<a class="kv-navlink" href="#sobre" style="padding: 12px 0">Sobre</a>
+<a class="kv-navlink" href="#servicos" style="padding: 12px 0">Serviços</a>
+<a class="kv-navlink" href="#metodo" style="padding: 12px 0">Método</a>
+<a class="kv-navlink" href="#projetos" style="padding: 12px 0">Projetos</a>
+</div>
+<a class="kv-pill kv-pill-light" href="#contato" style="display: inline-flex; align-items: center; height: 44px; padding: 0 22px; border-radius: 999px; background-color: #ffffff; font-size: 15px; font-weight: 500; white-space: nowrap">Iniciar um projeto</a>
+</nav>
+
+<div style="display: flex; flex-direction: column; gap: clamp(24px, 2.8vw, 40px)">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #ffffff; text-shadow: 0 0 2px #22386b, 0 0 12px #22386b, 0 0 20px #22386b"><span style="width: 6px; height: 6px; border-radius: 50%; background: #ffffff; flex: none"></span>Marketing digital</div>
+<h1 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: clamp(44px, 7.6vw, 116px); line-height: 1; letter-spacing: -0.04em; max-width: 8.2em">Ser visto, reconhecido e lembrado.</h1>
+<div style="display: flex; flex-direction: column; gap: 28px; max-width: 520px">
+<p style="margin: 0; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.5; color: #ffffff; text-shadow: 0 0 2px #22386b, 0 0 12px #22386b, 0 0 20px #22386b">A KRIVO transforma negócios digitalmente desestruturados em marcas com autoridade, identidade e posicionamento.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="kv-pill kv-pill-light" href="#contato" style="display: inline-flex; align-items: center; gap: 14px; height: 54px; padding: 0 8px 0 26px; border-radius: 999px; background-color: #ffffff; font-size: 16px; font-weight: 500">Iniciar um projeto<span style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: #223862; color: #ffffff"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+<a class="kv-pill kv-pill-ghost" href="#servicos" style="display: inline-flex; align-items: center; height: 54px; padding: 0 26px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.6); background-color: rgba(26,44,85,0.55); box-sizing: border-box; font-size: 16px; font-weight: 500">Ver serviços</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<div aria-hidden="true" style="overflow: hidden; border-bottom: 1px solid rgba(34,56,98,0.14); padding: 26px 0">
+<div class="kv-marquee" style="display: flex; width: max-content; font-family: 'Lexend', system-ui, sans-serif; font-weight: 300; font-size: 20px; letter-spacing: -0.01em; color: #223862; white-space: nowrap">
+<div style="display: flex; align-items: center; gap: 28px; padding-right: 28px"><span>Estratégia</span><span style="color: #a4b2d4">→</span><span>Posicionamento</span><span style="color: #a4b2d4">→</span><span>Identidade visual</span><span style="color: #a4b2d4">→</span><span>Conteúdo</span><span style="color: #a4b2d4">→</span><span>Sites</span><span style="color: #a4b2d4">→</span><span>Performance</span><span style="color: #a4b2d4">→</span><span>Estratégia</span><span style="color: #a4b2d4">→</span><span>Posicionamento</span><span style="color: #a4b2d4">→</span><span>Identidade visual</span><span style="color: #a4b2d4">→</span><span>Conteúdo</span><span style="color: #a4b2d4">→</span><span>Sites</span><span style="color: #a4b2d4">→</span><span>Performance</span><span style="color: #a4b2d4">→</span></div>
+<div style="display: flex; align-items: center; gap: 28px; padding-right: 28px"><span>Estratégia</span><span style="color: #a4b2d4">→</span><span>Posicionamento</span><span style="color: #a4b2d4">→</span><span>Identidade visual</span><span style="color: #a4b2d4">→</span><span>Conteúdo</span><span style="color: #a4b2d4">→</span><span>Sites</span><span style="color: #a4b2d4">→</span><span>Performance</span><span style="color: #a4b2d4">→</span><span>Estratégia</span><span style="color: #a4b2d4">→</span><span>Posicionamento</span><span style="color: #a4b2d4">→</span><span>Identidade visual</span><span style="color: #a4b2d4">→</span><span>Conteúdo</span><span style="color: #a4b2d4">→</span><span>Sites</span><span style="color: #a4b2d4">→</span><span>Performance</span><span style="color: #a4b2d4">→</span></div>
+</div>
+</div>
+
+<main>
+
+<section id="sobre" style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: clamp(72px, 10vw, 160px) clamp(20px, 4vw, 48px)">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 48px clamp(32px, 6vw, 96px)">
+<div style="flex: 1 1 280px; max-width: 440px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #626f94"><span style="width: 6px; height: 6px; border-radius: 50%; background: #223862; flex: none"></span>Sobre a KRIVO</div>
+<img src="./assets/ace74d46642547cc7cb4da776dd77e05.webp" alt="" style="width: 100%; height: auto; display: block">
+</div>
+<div style="flex: 2 1 480px; min-width: 0; display: flex; flex-direction: column; gap: clamp(40px, 5vw, 72px)">
+<h2 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 300; font-size: clamp(28px, 3.5vw, 52px); line-height: 1.14; letter-spacing: -0.03em">Mais do que estar presente no digital, é preciso <span style="text-decoration: underline; text-decoration-color: #a4b2d4; text-decoration-thickness: 2px; text-underline-offset: 0.14em">ser visto</span>, <span style="text-decoration: underline; text-decoration-color: #a4b2d4; text-decoration-thickness: 2px; text-underline-offset: 0.14em">reconhecido</span> e <span style="text-decoration: underline; text-decoration-color: #a4b2d4; text-decoration-thickness: 2px; text-underline-offset: 0.14em">lembrado</span>.</h2>
+<p style="margin: 0; max-width: 560px; font-size: 18px; line-height: 1.6; color: #626f94">Por meio da criatividade, da estratégia e da tecnologia, trazemos clareza à comunicação, fortalecemos a presença digital e geramos oportunidades reais de crescimento.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 32px 40px">
+<div style="flex: 1 1 180px; border-top: 1px solid rgba(34,56,98,0.14); padding-top: 20px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: 20px; letter-spacing: -0.02em">Estratégia</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #626f94">Diagnóstico, posicionamento e um plano claro antes de qualquer peça.</p>
+</div>
+<div style="flex: 1 1 180px; border-top: 1px solid rgba(34,56,98,0.14); padding-top: 20px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: 20px; letter-spacing: -0.02em">Criatividade</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #626f94">Identidade e conteúdo com assinatura própria, feitos para serem lembrados.</p>
+</div>
+<div style="flex: 1 1 180px; border-top: 1px solid rgba(34,56,98,0.14); padding-top: 20px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: 20px; letter-spacing: -0.02em">Tecnologia</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #626f94">Sites, dados e automação para transformar atenção em oportunidade.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="servicos" style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 0 clamp(20px, 4vw, 48px) clamp(72px, 10vw, 160px)">
+<div style="display: flex; flex-direction: column; gap: 24px; padding-bottom: clamp(40px, 5vw, 72px)">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #626f94"><span style="width: 6px; height: 6px; border-radius: 50%; background: #223862; flex: none"></span>Serviços</div>
+<h2 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 300; font-size: clamp(32px, 4.4vw, 64px); line-height: 1.06; letter-spacing: -0.035em; max-width: 14em">Soluções para cada etapa <span style="color: #626f94">da sua presença digital.</span></h2>
+</div>
+<div style="display: flex; flex-direction: column; margin: 0 -16px; border-bottom: 1px solid rgba(34,56,98,0.14)">
+<a class="kv-row" href="#contato" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 32px; padding: 30px 16px; border-top: 1px solid rgba(34,56,98,0.14)">
+<span style="flex: 0 0 48px; font-size: 14px; color: #626f94">01</span>
+<span style="flex: 1 1 300px; font-family: 'Lexend', system-ui, sans-serif; font-weight: 300; font-size: clamp(24px, 2.7vw, 38px); line-height: 1.15; letter-spacing: -0.03em">Estratégia &amp; posicionamento</span>
+<span style="flex: 1 1 320px; max-width: 460px; font-size: 16px; line-height: 1.55; color: #626f94">Diagnóstico da marca, do público e da concorrência para definir onde e como você deve aparecer.</span>
+<span class="kv-row-arrow" style="flex: none; display: inline-flex; align-self: center"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</a>
+<a class="kv-row" href="#contato" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 32px; padding: 30px 16px; border-top: 1px solid rgba(34,56,98,0.14)">
+<span style="flex: 0 0 48px; font-size: 14px; color: #626f94">02</span>
+<span style="flex: 1 1 300px; font-family: 'Lexend', system-ui, sans-serif; font-weight: 300; font-size: clamp(24px, 2.7vw, 38px); line-height: 1.15; letter-spacing: -0.03em">Identidade visual</span>
+<span style="flex: 1 1 320px; max-width: 460px; font-size: 16px; line-height: 1.55; color: #626f94">Marcas com assinatura própria: logotipo, sistema visual e manual para aplicar com consistência.</span>
+<span class="kv-row-arrow" style="flex: none; display: inline-flex; align-self: center"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</a>
+<a class="kv-row" href="#contato" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 32px; padding: 30px 16px; border-top: 1px solid rgba(34,56,98,0.14)">
+<span style="flex: 0 0 48px; font-size: 14px; color: #626f94">03</span>
+<span style="flex: 1 1 300px; font-family: 'Lexend', system-ui, sans-serif; font-weight: 300; font-size: clamp(24px, 2.7vw, 38px); line-height: 1.15; letter-spacing: -0.03em">Social media &amp; conteúdo</span>
+<span style="flex: 1 1 320px; max-width: 460px; font-size: 16px; line-height: 1.55; color: #626f94">Planejamento, criação e gestão de conteúdo que constrói autoridade e mantém sua marca presente.</span>
+<span class="kv-row-arrow" style="flex: none; display: inline-flex; align-self: center"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</a>
+<a class="kv-row" href="#contato" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 32px; padding: 30px 16px; border-top: 1px solid rgba(34,56,98,0.14)">
+<span style="flex: 0 0 48px; font-size: 14px; color: #626f94">04</span>
+<span style="flex: 1 1 300px; font-family: 'Lexend', system-ui, sans-serif; font-weight: 300; font-size: clamp(24px, 2.7vw, 38px); line-height: 1.15; letter-spacing: -0.03em">Sites &amp; landing pages</span>
+<span style="flex: 1 1 320px; max-width: 460px; font-size: 16px; line-height: 1.55; color: #626f94">Páginas rápidas, bem desenhadas e pensadas para converter visitas em contatos.</span>
+<span class="kv-row-arrow" style="flex: none; display: inline-flex; align-self: center"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</a>
+<a class="kv-row" href="#contato" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 32px; padding: 30px 16px; border-top: 1px solid rgba(34,56,98,0.14)">
+<span style="flex: 0 0 48px; font-size: 14px; color: #626f94">05</span>
+<span style="flex: 1 1 300px; font-family: 'Lexend', system-ui, sans-serif; font-weight: 300; font-size: clamp(24px, 2.7vw, 38px); line-height: 1.15; letter-spacing: -0.03em">Tráfego &amp; performance</span>
+<span style="flex: 1 1 320px; max-width: 460px; font-size: 16px; line-height: 1.55; color: #626f94">Campanhas pagas acompanhadas por dados, com foco em oportunidades reais de crescimento.</span>
+<span class="kv-row-arrow" style="flex: none; display: inline-flex; align-self: center"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</a>
+</div>
+</section>
+
+<section id="metodo" style="padding: 12px">
+<div class="kv-light" style="border-radius: 28px; box-sizing: border-box; padding: clamp(28px, 5vw, 72px) clamp(20px, 5vw, 72px); display: flex; flex-direction: column; gap: clamp(56px, 9vw, 140px)">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #223862"><span style="width: 6px; height: 6px; border-radius: 50%; background: #223862; flex: none"></span>Método</div>
+<h2 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 300; font-size: clamp(32px, 4.4vw, 64px); line-height: 1.06; letter-spacing: -0.035em; max-width: 9.5em">Da desordem à autoridade, em quatro etapas.</h2>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px">
+<li style="flex: 1 1 230px; box-sizing: border-box; min-height: 250px; padding: 28px; border-radius: 20px; background: #ffffff; border: 1px solid rgba(34,56,98,0.1); display: flex; flex-direction: column; justify-content: space-between; gap: 40px">
+<span style="font-size: 14px; color: #626f94">01</span>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: 24px; letter-spacing: -0.025em">Diagnóstico</h3>
+<p style="margin: 0; min-height: 4.65em; font-size: 15px; line-height: 1.55; color: #626f94">Entendemos o negócio, o público e o momento atual da sua presença digital.</p>
+</div>
+</li>
+<li style="flex: 1 1 230px; box-sizing: border-box; min-height: 250px; padding: 28px; border-radius: 20px; background: #ffffff; border: 1px solid rgba(34,56,98,0.1); display: flex; flex-direction: column; justify-content: space-between; gap: 40px">
+<span style="font-size: 14px; color: #626f94">02</span>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: 24px; letter-spacing: -0.025em">Estratégia</h3>
+<p style="margin: 0; min-height: 4.65em; font-size: 15px; line-height: 1.55; color: #626f94">Definimos posicionamento, mensagens e prioridades em um plano claro.</p>
+</div>
+</li>
+<li style="flex: 1 1 230px; box-sizing: border-box; min-height: 250px; padding: 28px; border-radius: 20px; background: #ffffff; border: 1px solid rgba(34,56,98,0.1); display: flex; flex-direction: column; justify-content: space-between; gap: 40px">
+<span style="font-size: 14px; color: #626f94">03</span>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: 24px; letter-spacing: -0.025em">Criação</h3>
+<p style="margin: 0; min-height: 4.65em; font-size: 15px; line-height: 1.55; color: #626f94">Damos forma à identidade, ao conteúdo e aos canais da marca.</p>
+</div>
+</li>
+<li style="flex: 1 1 230px; box-sizing: border-box; min-height: 250px; padding: 28px; border-radius: 20px; background: #ffffff; border: 1px solid rgba(34,56,98,0.1); display: flex; flex-direction: column; justify-content: space-between; gap: 40px">
+<span style="font-size: 14px; color: #626f94">04</span>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: 24px; letter-spacing: -0.025em">Crescimento</h3>
+<p style="margin: 0; min-height: 4.65em; font-size: 15px; line-height: 1.55; color: #626f94">Acompanhamos os resultados e ajustamos a rota com base em dados.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+
+<section id="projetos" style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: clamp(72px, 10vw, 160px) clamp(20px, 4vw, 48px)">
+<div style="display: flex; flex-direction: column; gap: 24px; padding-bottom: clamp(40px, 5vw, 72px)">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #626f94"><span style="width: 6px; height: 6px; border-radius: 50%; background: #223862; flex: none"></span>Projetos</div>
+<h2 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 300; font-size: clamp(32px, 4.4vw, 64px); line-height: 1.06; letter-spacing: -0.035em; max-width: 14em">Marcas que passaram <span style="color: #626f94">a ser lembradas.</span></h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 40px 16px">
+<article style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div class="kv-cover-a" style="aspect-ratio: 4 / 5; border-radius: 20px; display: flex; align-items: flex-end; padding: 20px; box-sizing: border-box"><span style="display: inline-flex; align-items: center; height: 32px; padding: 0 14px; border-radius: 999px; background: #ffffff; font-size: 13px; color: #223862">[Imagem do projeto]</span></div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h3 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: 22px; letter-spacing: -0.025em">[Nome do projeto]</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; border: 1px solid rgba(34,56,98,0.2); font-size: 13px; color: #626f94">[Segmento]</span><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; border: 1px solid rgba(34,56,98,0.2); font-size: 13px; color: #626f94">[Serviço]</span></div>
+</div>
+</article>
+<article style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div class="kv-cover-b" style="aspect-ratio: 4 / 5; border-radius: 20px; display: flex; align-items: flex-end; padding: 20px; box-sizing: border-box"><span style="display: inline-flex; align-items: center; height: 32px; padding: 0 14px; border-radius: 999px; background: #ffffff; font-size: 13px; color: #223862">[Imagem do projeto]</span></div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h3 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: 22px; letter-spacing: -0.025em">[Nome do projeto]</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; border: 1px solid rgba(34,56,98,0.2); font-size: 13px; color: #626f94">[Segmento]</span><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; border: 1px solid rgba(34,56,98,0.2); font-size: 13px; color: #626f94">[Serviço]</span></div>
+</div>
+</article>
+<article style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div class="kv-cover-c" style="aspect-ratio: 4 / 5; border-radius: 20px; display: flex; align-items: flex-end; padding: 20px; box-sizing: border-box"><span style="display: inline-flex; align-items: center; height: 32px; padding: 0 14px; border-radius: 999px; background: #ffffff; font-size: 13px; color: #223862">[Imagem do projeto]</span></div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h3 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: 22px; letter-spacing: -0.025em">[Nome do projeto]</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; border: 1px solid rgba(34,56,98,0.2); font-size: 13px; color: #626f94">[Segmento]</span><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; border: 1px solid rgba(34,56,98,0.2); font-size: 13px; color: #626f94">[Serviço]</span></div>
+</div>
+</article>
+</div>
+</section>
+
+</main>
+
+<footer id="contato" style="padding: 12px">
+<div class="kv-close" style="border-radius: 28px; box-sizing: border-box; padding: clamp(28px, 5vw, 72px) clamp(20px, 5vw, 72px) clamp(20px, 2.6vw, 36px); display: flex; flex-direction: column; gap: clamp(56px, 8vw, 128px); color: #ffffff">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 48px">
+<div style="flex: 2 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #ffffff; text-shadow: 0 0 2px #22386b, 0 0 12px #22386b, 0 0 20px #22386b"><span style="width: 6px; height: 6px; border-radius: 50%; background: #ffffff; flex: none"></span>Contato</div>
+<h2 style="margin: 0; font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: clamp(38px, 5.8vw, 88px); line-height: 1.02; letter-spacing: -0.04em; max-width: 9em">Vamos fazer sua marca ser lembrada.</h2>
+<div style="display: flex">
+<a class="kv-pill kv-pill-light" href="#contato" style="display: inline-flex; align-items: center; gap: 14px; height: 54px; padding: 0 8px 0 26px; border-radius: 999px; background-color: #ffffff; font-size: 16px; font-weight: 500">Iniciar um projeto<span style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: #223862; color: #ffffff"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+</div>
+</div>
+<div style="flex: 0 1 340px; box-sizing: border-box; padding: 8px 28px; border-radius: 20px; background: #ffffff; color: #223862; display: flex; flex-direction: column">
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 20px 0">
+<span style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #626f94">WhatsApp</span>
+<span style="font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: 19px; letter-spacing: -0.02em">[SEU WHATSAPP]</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 20px 0; border-top: 1px solid rgba(34,56,98,0.14)">
+<span style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #626f94">E-mail</span>
+<span style="font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: 19px; letter-spacing: -0.02em">[SEU E-MAIL]</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 20px 0; border-top: 1px solid rgba(34,56,98,0.14)">
+<span style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #626f94">Instagram</span>
+<span style="font-family: 'Lexend', system-ui, sans-serif; font-weight: 400; font-size: 19px; letter-spacing: -0.02em">@krivomkt</span>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: clamp(20px, 2.6vw, 36px)">
+<img src="./assets/a55b48b5ef40ca914ec38b902b416032.svg" alt="KRIVO" style="width: 100%; height: auto; display: block">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 32px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.4); font-size: 14px; font-weight: 500; text-shadow: 0 0 2px #22386b, 0 0 12px #22386b, 0 0 20px #22386b">
+<span>© 2026 KRIVO Marketing Digital</span>
+<span>Criando visibilidade em lucratividade</span>
+<a class="kv-footlink" href="#topo" style="display: inline-flex; align-items: center; min-height: 44px">Voltar ao topo ↑</a>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5870}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

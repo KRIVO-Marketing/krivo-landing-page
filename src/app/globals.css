@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* O design original aplica :hover sem condicionar a (hover: hover). */
+@custom-variant hover (&:hover);
+
+/* Breakpoint do design: inclusivo em 760px (max-[760px] do Tailwind é exclusivo). */
+@custom-variant mobile (@media (max-width: 760px));
+
+@theme {
+  --font-sans: "Albert Sans", system-ui, sans-serif;
+  --font-display: "Lexend", system-ui, sans-serif;
+
+  --color-navy: #223862;
+  --color-navy-deep: #22386b;
+  --color-muted: #626f94;
+  --color-mist: #a4b2d4;
+  --color-cloud: #f1f3fb;
+  --color-line: rgba(34, 56, 98, 0.14);
+  --color-line-soft: rgba(34, 56, 98, 0.1);
+  --color-line-strong: rgba(34, 56, 98, 0.2);
+
+  --text-shadow-halo: 0 0 2px #22386b, 0 0 12px #22386b, 0 0 20px #22386b;
+
+  --animate-marquee: marquee 48s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  a {
+    color: #223862;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #626f94;
+  }
+}
