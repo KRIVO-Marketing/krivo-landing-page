@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CtaLink } from "./CtaLink";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
@@ -36,12 +37,11 @@ export function Hero() {
               </a>
             ))}
           </div>
-          <a
-            href="#contato"
+          <WhatsAppLink
             className="inline-flex h-11 items-center rounded-full bg-white px-[22px] text-[15px] font-medium whitespace-nowrap text-navy transition-[translate,background-color] duration-250 ease-[ease] hover:-translate-y-0.5"
           >
-            Iniciar um projeto
-          </a>
+            Quero crescer com a KRIVO
+          </WhatsAppLink>
         </nav>
 
         <div className="flex flex-col gap-[clamp(24px,2.8vw,40px)]">

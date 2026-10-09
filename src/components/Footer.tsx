@@ -1,7 +1,10 @@
 import Image from "next/image";
+import { WHATSAPP_DISPLAY } from "@/lib/whatsapp";
 import { CtaLink } from "./CtaLink";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 const contacts = [
+  { label: "WhatsApp", value: WHATSAPP_DISPLAY, whatsapp: true },
   { label: "E-mail", value: "krivomarketing@gmail.com", href: "mailto:krivomarketing@gmail.com" },
   { label: "Instagram", value: "@krivo.mkt", href: "https://www.instagram.com/krivo.mkt/" },
 ];
@@ -28,7 +31,11 @@ export function Footer() {
                 <span className="text-[13px] tracking-[0.1em] text-muted uppercase">
                   {contact.label}
                 </span>
-                {contact.href ? (
+                {contact.whatsapp ? (
+                  <WhatsAppLink className="font-display text-[19px] font-normal tracking-[-0.02em]">
+                    {contact.value}
+                  </WhatsAppLink>
+                ) : contact.href ? (
                   <a
                     href={contact.href}
                     target="_blank"
