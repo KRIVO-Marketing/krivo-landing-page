@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "npm run build && npx wrangler deploy"
   },
   "dependencies": {
     "motion": "^14.0.0",
@@ -23,5 +24,8 @@
     "eslint-config-next": "^16.4.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=20.9"
   }
 }
