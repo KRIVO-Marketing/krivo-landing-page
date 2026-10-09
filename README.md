@@ -19,4 +19,4 @@ npm run lint
 - `src/app/page.tsx` — composição da página
 - `src/components/` — uma seção por arquivo (`Hero`, `Marquee`, `About`, `Services`, `Method`, `Projects`, `Footer`) e peças compartilhadas (`CtaLink`, `ArrowIcon`)
 - `public/assets/` — imagens e logo
-- `design-reference/` — export original do design (não faz parte do build)
+- `design-reference/` — export original do design (não faz parte do build).
