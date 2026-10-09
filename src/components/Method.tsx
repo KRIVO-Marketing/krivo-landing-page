@@ -24,7 +24,7 @@ export function Method() {
       <div className="box-border flex flex-col gap-[clamp(56px,9vw,140px)] rounded-[28px] bg-cloud bg-[url(/assets/bg-light.webp)] bg-cover bg-left bg-no-repeat px-[clamp(20px,5vw,72px)] py-[clamp(28px,5vw,72px)] mobile:bg-[position:30%_center]">
         <div className="flex flex-col gap-6">
           <h2 className="max-w-[9.5em] font-display text-[clamp(32px,4.4vw,64px)] leading-[1.06] font-light tracking-[-0.035em]">
-            Da desordem à autoridade, em quatro etapas.
+            Da incerteza à autoridade, em quatro etapas.
           </h2>
         </div>
         <ol className="m-0 flex list-none flex-wrap gap-3 p-0">

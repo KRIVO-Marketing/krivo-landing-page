@@ -1,10 +1,10 @@
 import { About } from "@/components/About";
+import { Channels } from "@/components/Channels";
 import { Footer } from "@/components/Footer";
 import { GradualBlur } from "@/components/GradualBlur";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { Method } from "@/components/Method";
-import { Projects } from "@/components/Projects";
 import { Services } from "@/components/Services";
 
 export default function Home() {
@@ -19,7 +19,8 @@ export default function Home() {
         <About />
         <Services />
         <Method />
-        <Projects />
+        <Channels />
+        {/* Seção Projetos oculta até haver clientes: <Projects /> (import de "@/components/Projects") */}
       </main>
       <Footer />
       <GradualBlur />

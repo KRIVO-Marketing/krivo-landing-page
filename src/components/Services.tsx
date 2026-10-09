@@ -1,4 +1,4 @@
-import { ArrowIcon } from "./ArrowIcon";
+import { ServiceList } from "./ServiceList";
 
 const services = [
   {
@@ -34,28 +34,7 @@ export function Services() {
           Soluções para cada etapa <span className="text-muted">da sua presença digital.</span>
         </h2>
       </div>
-      <div className="-mx-4 flex flex-col border-b border-line">
-        {services.map((service, index) => (
-          <a
-            key={service.title}
-            href="#contato"
-            className="group flex flex-wrap items-baseline gap-x-8 gap-y-2.5 border-t border-line px-4 py-[30px] text-navy transition-[background-color] duration-250 ease-[ease] hover:bg-[#f4f6fb]"
-          >
-            <span className="flex-[0_0_48px] text-[14px] text-muted">
-              {String(index + 1).padStart(2, "0")}
-            </span>
-            <span className="flex-[1_1_300px] font-display text-[clamp(24px,2.7vw,38px)] leading-[1.15] font-light tracking-[-0.03em]">
-              {service.title}
-            </span>
-            <span className="max-w-[460px] flex-[1_1_320px] text-[16px] leading-[1.55] text-muted">
-              {service.text}
-            </span>
-            <span className="inline-flex flex-none self-center transition-transform duration-250 ease-[ease] group-hover:translate-x-1.5 mobile:hidden">
-              <ArrowIcon size={22} strokeWidth={1.4} />
-            </span>
-          </a>
-        ))}
-      </div>
+      <ServiceList services={services} />
     </section>
   );
 }

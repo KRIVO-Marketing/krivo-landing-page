@@ -2,7 +2,6 @@ import Image from "next/image";
 import { CtaLink } from "./CtaLink";
 
 const contacts = [
-  { label: "WhatsApp", value: "[SEU WHATSAPP]" },
   { label: "E-mail", value: "krivomarketing@gmail.com", href: "mailto:krivomarketing@gmail.com" },
   { label: "Instagram", value: "@krivo.mkt", href: "https://www.instagram.com/krivo.mkt/" },
 ];
