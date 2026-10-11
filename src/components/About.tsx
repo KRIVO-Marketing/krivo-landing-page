@@ -45,7 +45,7 @@ export function About() {
           <p className="max-w-[560px] text-[18px] leading-[1.6] text-muted">
             Por meio da criatividade, da estratégia e da tecnologia, trazemos clareza à
             comunicação, fortalecemos a presença digital e geramos oportunidades reais de
-            crescimento.
+            crescimento para empresas de Campinas e região.
           </p>
           <div className="flex flex-wrap gap-x-10 gap-y-8">
             {pillars.map((pillar) => (

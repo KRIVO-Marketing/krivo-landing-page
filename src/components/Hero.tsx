@@ -50,8 +50,8 @@ export function Hero() {
           </h1>
           <div className="flex max-w-[520px] flex-col gap-7">
             <p className="text-[clamp(16px,1.3vw,19px)] leading-normal text-white text-shadow-halo">
-              A KRIVO transforma negócios digitalmente desestruturados em marcas com autoridade,
-              identidade e posicionamento.
+              A KRIVO, agência de marketing em Campinas e região, transforma negócios digitalmente
+              desestruturados em marcas com autoridade, identidade e posicionamento.
             </p>
             <div className="flex flex-wrap gap-3">
               <CtaLink />

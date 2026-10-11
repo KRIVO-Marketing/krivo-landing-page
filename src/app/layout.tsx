@@ -7,11 +7,12 @@ const GA_ID = "G-86HVDHE5M5";
 
 const SITE_URL = "https://www.krivomkt.com.br";
 const DESCRIPTION =
-  "A KRIVO transforma negócios digitalmente desestruturados em marcas com autoridade, identidade e posicionamento, com estratégia, criatividade e tecnologia.";
+  "KRIVO é uma agência de marketing em Campinas e região (SP) que transforma negócios em marcas com autoridade, identidade e posicionamento, com estratégia, criatividade e tecnologia.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "KRIVO | Marketing, branding e posicionamento digital",
+  title: "KRIVO | Agência de Marketing em Campinas",
+  keywords: ["KRIVO", "KRIVO Campinas", "agência de marketing Campinas", "marketing digital Campinas", "branding Campinas", "posicionamento de marca"],
   description: DESCRIPTION,
   alternates: { canonical: "/" },
   openGraph: {
@@ -33,10 +34,15 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "ProfessionalService"],
   "@id": `${SITE_URL}/#organization`,
   name: "KRIVO",
+  alternateName: ["KRIVO Marketing", "KRIVO Campinas"],
   url: SITE_URL,
+  telephone: "+55-19-99679-2750",
+  address: { "@type": "PostalAddress", addressLocality: "Campinas", addressRegion: "SP", addressCountry: "BR" },
+  areaServed: [{ "@type": "City", name: "Campinas" }, { "@type": "AdministrativeArea", name: "Região Metropolitana de Campinas" }, { "@type": "Country", name: "Brasil" }],
+  knowsAbout: ["Marketing digital", "Branding", "Posicionamento de marca", "Gestão de redes sociais", "Criação de sites"],
   logo: `${SITE_URL}/assets/krivo-logo.svg`,
   description: DESCRIPTION,
   email: "krivomarketing@gmail.com",

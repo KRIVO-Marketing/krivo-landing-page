@@ -19,7 +19,6 @@ export default function Home() {
         <Services />
         <Method />
         <Channels />
-        {/* Seção Projetos oculta até haver clientes: <Projects /> (import de "@/components/Projects") */}
       </main>
       <Footer />
       <GradualBlur />
