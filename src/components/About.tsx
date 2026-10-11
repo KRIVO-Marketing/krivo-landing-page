@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const pillars = [
   {
     title: "Estratégia",
@@ -25,15 +23,19 @@ export function About() {
     >
       <div className="flex flex-wrap items-start gap-x-[clamp(32px,6vw,96px)] gap-y-12">
         <div className="flex max-w-[440px] flex-[1_1_280px] flex-col gap-10">
-          <Image
-            src="/assets/sobre.webp"
-            alt=""
-            width={1410}
-            height={1316}
-            unoptimized
-            fetchPriority="low"
-            className="block h-auto w-full"
-          />
+          <picture className="block w-full">
+            <source media="(max-width: 760px)" srcSet="/assets/sobre-mobile.webp" type="image/webp" />
+            <img
+              src="/assets/sobre.webp"
+              alt=""
+              width={880}
+              height={821}
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+              className="block h-auto w-full"
+            />
+          </picture>
         </div>
         <div className="flex min-w-0 flex-[2_1_480px] flex-col gap-[clamp(40px,5vw,72px)]">
           <h2 className="font-display text-[clamp(28px,3.5vw,52px)] leading-[1.14] font-light tracking-[-0.03em]">

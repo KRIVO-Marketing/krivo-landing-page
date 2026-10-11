@@ -48,20 +48,36 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Imagem do LCP: sem o preload ela só seria descoberta depois do CSS.
-  preload("/assets/bg-hero.webp", { as: "image", type: "image/webp", fetchPriority: "high" });
+  // Fontes críticas: descobertas mais cedo para evitar FOIT/layout shift.
   preload("/fonts/albert-sans-latin.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
   preload("/fonts/lexend-latin.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
 
   return (
     <html lang="pt-BR">
       <head>
+        {/* Preload responsivo do Hero (LCP): mobile baixa ~119KB em vez de 1.6MB */}
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/bg-hero-mobile.webp"
+          type="image/webp"
+          media="(max-width: 760px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/bg-hero.webp"
+          type="image/webp"
+          media="(min-width: 761px)"
+          fetchPriority="high"
+        />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body>
-        {/* Google tag (gtag.js) */}
-        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
-        <Script id="google-tag" strategy="afterInteractive">
+        {/* Google tag (gtag.js): carregado em tempo ocioso para desobstruir LCP e FCP */}
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
+        <Script id="google-tag" strategy="lazyOnload">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
