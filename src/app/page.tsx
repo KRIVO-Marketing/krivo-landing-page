@@ -4,12 +4,8 @@ import { Footer } from "@/components/Footer";
 import { GradualBlur } from "@/components/GradualBlur";
 import { Hero } from "@/components/Hero";
 import { LazyBackgrounds } from "@/components/LazyBackgrounds";
-import dynamic from "next/dynamic";
 import { Method } from "@/components/Method";
-
-const Services = dynamic(() => import("@/components/Services").then((m) => m.Services), {
-  ssr: true,
-});
+import { Services } from "@/components/Services";
 
 export default function Home() {
   return (

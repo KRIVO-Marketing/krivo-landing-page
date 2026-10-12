@@ -6,4 +6,3 @@
 *.tsbuildinfo
 next-env.d.ts
 .env*
-/.assets_backup/
