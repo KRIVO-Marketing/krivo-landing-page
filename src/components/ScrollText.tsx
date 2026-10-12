@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { m, useTransform, type MotionValue } from "motion/react";
+import { motion, useTransform, type MotionValue } from "motion/react";
 
 type ScrollTextProps = {
   text: string;
@@ -36,7 +36,7 @@ function ScrollChar({
 
   const color = useTransform(progress, stops, colors);
 
-  return <m.span style={{ color }}>{char}</m.span>;
+  return <motion.span style={{ color }}>{char}</motion.span>;
 }
 
 export function ScrollText({ text, progress, charOffset, totalChars, colors }: ScrollTextProps) {
