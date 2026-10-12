@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useSpring } from "motion/react";
+import { m, useScroll, useSpring } from "motion/react";
 import { ServiceStep } from "./ServiceStep";
 
 type ServiceListProps = {
@@ -21,7 +21,7 @@ export function ServiceList({ services }: ServiceListProps) {
   return (
     <div ref={listRef} className="relative">
       <div aria-hidden="true" className="absolute inset-y-0 left-3 w-px bg-line md:left-1/2">
-        <motion.div className="h-full origin-top bg-navy" style={{ scaleY: fill }} />
+        <m.div className="h-full origin-top bg-navy" style={{ scaleY: fill }} />
       </div>
       {services.map((service, index) => (
         <ServiceStep
