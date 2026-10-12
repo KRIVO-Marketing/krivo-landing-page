@@ -1,0 +1,21 @@
+/* Gerado por scripts/optimize-images.mjs — não editar à mão. */
+[data-lazy-bg="close"].bg-loaded {
+  background-image: url(/assets/bg-close-2400.e48a2a6e.webp);
+  background-image: image-set(url(/assets/bg-close-2400.97750d4d.avif) type("image/avif"), url(/assets/bg-close-2400.e48a2a6e.webp) type("image/webp"));
+}
+@media (max-width: 760px) {
+  [data-lazy-bg="close"].bg-loaded {
+    background-image: url(/assets/bg-close-1280.250f1c68.webp);
+    background-image: image-set(url(/assets/bg-close-1280.6f84c7f4.avif) type("image/avif"), url(/assets/bg-close-1280.250f1c68.webp) type("image/webp"));
+  }
+}
+[data-lazy-bg="light"].bg-loaded {
+  background-image: url(/assets/bg-light-2200.1a2edebb.webp);
+  background-image: image-set(url(/assets/bg-light-2200.86bee1fe.avif) type("image/avif"), url(/assets/bg-light-2200.1a2edebb.webp) type("image/webp"));
+}
+@media (max-width: 760px) {
+  [data-lazy-bg="light"].bg-loaded {
+    background-image: url(/assets/bg-light-1280.2ef82e97.webp);
+    background-image: image-set(url(/assets/bg-light-1280.06d410a9.avif) type("image/avif"), url(/assets/bg-light-1280.2ef82e97.webp) type("image/webp"));
+  }
+}

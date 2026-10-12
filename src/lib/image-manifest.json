@@ -1,0 +1,103 @@
+{
+  "bg-hero": {
+    "width": 2400,
+    "height": 1500,
+    "variants": [
+      {
+        "w": 960,
+        "avif": "/assets/bg-hero-960.6d5bbcf7.avif",
+        "avifBytes": 176230,
+        "webp": "/assets/bg-hero-960.06e721ac.webp",
+        "webpBytes": 239970
+      },
+      {
+        "w": 1440,
+        "avif": "/assets/bg-hero-1440.4ff8ab70.avif",
+        "avifBytes": 394713,
+        "webp": "/assets/bg-hero-1440.b9f56bb1.webp",
+        "webpBytes": 546306
+      },
+      {
+        "w": 1920,
+        "avif": "/assets/bg-hero-1920.f3e1e1d2.avif",
+        "avifBytes": 656741,
+        "webp": "/assets/bg-hero-1920.c8d6833e.webp",
+        "webpBytes": 911070
+      },
+      {
+        "w": 2400,
+        "avif": "/assets/bg-hero-2400.79424c64.avif",
+        "avifBytes": 1273364,
+        "webp": "/assets/bg-hero-2400.d2ebe4db.webp",
+        "webpBytes": 1604390
+      }
+    ]
+  },
+  "bg-close": {
+    "width": 2400,
+    "height": 1400,
+    "variants": [
+      {
+        "w": 1280,
+        "avif": "/assets/bg-close-1280.6f84c7f4.avif",
+        "avifBytes": 278738,
+        "webp": "/assets/bg-close-1280.250f1c68.webp",
+        "webpBytes": 380640
+      },
+      {
+        "w": 2400,
+        "avif": "/assets/bg-close-2400.97750d4d.avif",
+        "avifBytes": 1123875,
+        "webp": "/assets/bg-close-2400.e48a2a6e.webp",
+        "webpBytes": 1419682
+      }
+    ]
+  },
+  "bg-light": {
+    "width": 2200,
+    "height": 1300,
+    "variants": [
+      {
+        "w": 1280,
+        "avif": "/assets/bg-light-1280.06d410a9.avif",
+        "avifBytes": 253670,
+        "webp": "/assets/bg-light-1280.2ef82e97.webp",
+        "webpBytes": 358160
+      },
+      {
+        "w": 2200,
+        "avif": "/assets/bg-light-2200.86bee1fe.avif",
+        "avifBytes": 854868,
+        "webp": "/assets/bg-light-2200.1a2edebb.webp",
+        "webpBytes": 1130002
+      }
+    ]
+  },
+  "sobre": {
+    "width": 1410,
+    "height": 1316,
+    "variants": [
+      {
+        "w": 480,
+        "avif": "/assets/sobre-480.50ca2100.avif",
+        "avifBytes": 88050,
+        "webp": "/assets/sobre-480.952bbaf6.webp",
+        "webpBytes": 153496
+      },
+      {
+        "w": 880,
+        "avif": "/assets/sobre-880.62ce356b.avif",
+        "avifBytes": 329712,
+        "webp": "/assets/sobre-880.67743acb.webp",
+        "webpBytes": 525222
+      },
+      {
+        "w": 1410,
+        "avif": "/assets/sobre-1410.0bd232aa.avif",
+        "avifBytes": 654927,
+        "webp": "/assets/sobre-1410.98bb3d36.webp",
+        "webpBytes": 924326
+      }
+    ]
+  }
+}

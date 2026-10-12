@@ -96,9 +96,4 @@
 }
 
 /* Fundos abaixo da dobra: só são baixados perto da viewport (LazyBackgrounds), para não disputar banda com o hero. */
-[data-lazy-bg="close"].bg-loaded {
-  background-image: url(/assets/bg-close.webp);
-}
-[data-lazy-bg="light"].bg-loaded {
-  background-image: url(/assets/bg-light.webp);
-}
+@import "./backgrounds.generated.css";
