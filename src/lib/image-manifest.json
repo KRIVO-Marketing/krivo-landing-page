@@ -45,6 +45,13 @@
         "webpBytes": 380640
       },
       {
+        "w": 1920,
+        "avif": "/assets/bg-close-1920.521c0a3f.avif",
+        "avifBytes": 585791,
+        "webp": "/assets/bg-close-1920.38fa9672.webp",
+        "webpBytes": 795462
+      },
+      {
         "w": 2400,
         "avif": "/assets/bg-close-2400.97750d4d.avif",
         "avifBytes": 1123875,
@@ -63,6 +70,13 @@
         "avifBytes": 253670,
         "webp": "/assets/bg-light-1280.2ef82e97.webp",
         "webpBytes": 358160
+      },
+      {
+        "w": 1920,
+        "avif": "/assets/bg-light-1920.be41b8da.avif",
+        "avifBytes": 535674,
+        "webp": "/assets/bg-light-1920.8a147bb2.webp",
+        "webpBytes": 753220
       },
       {
         "w": 2200,

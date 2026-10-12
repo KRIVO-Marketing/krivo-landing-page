@@ -9,6 +9,12 @@
     background-image: image-set(url(/assets/bg-close-1280.6f84c7f4.avif) type("image/avif"), url(/assets/bg-close-1280.250f1c68.webp) type("image/webp"));
   }
 }
+@media (max-width: 760px) and (min-resolution: 2dppx) {
+  [data-lazy-bg="close"].bg-loaded {
+    background-image: url(/assets/bg-close-1920.38fa9672.webp);
+    background-image: image-set(url(/assets/bg-close-1920.521c0a3f.avif) type("image/avif"), url(/assets/bg-close-1920.38fa9672.webp) type("image/webp"));
+  }
+}
 [data-lazy-bg="light"].bg-loaded {
   background-image: url(/assets/bg-light-2200.1a2edebb.webp);
   background-image: image-set(url(/assets/bg-light-2200.86bee1fe.avif) type("image/avif"), url(/assets/bg-light-2200.1a2edebb.webp) type("image/webp"));
@@ -17,5 +23,11 @@
   [data-lazy-bg="light"].bg-loaded {
     background-image: url(/assets/bg-light-1280.2ef82e97.webp);
     background-image: image-set(url(/assets/bg-light-1280.06d410a9.avif) type("image/avif"), url(/assets/bg-light-1280.2ef82e97.webp) type("image/webp"));
+  }
+}
+@media (max-width: 760px) and (min-resolution: 2dppx) {
+  [data-lazy-bg="light"].bg-loaded {
+    background-image: url(/assets/bg-light-1920.8a147bb2.webp);
+    background-image: image-set(url(/assets/bg-light-1920.be41b8da.avif) type("image/avif"), url(/assets/bg-light-1920.8a147bb2.webp) type("image/webp"));
   }
 }
