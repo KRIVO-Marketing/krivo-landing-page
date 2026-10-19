@@ -15,7 +15,7 @@ export function Hero() {
   const { width, height } = dimensions("bg-hero");
   return (
     <header className="p-3">
-      <div className="relative isolate box-border flex min-h-[clamp(640px,56vw,840px)] flex-col justify-between gap-18 overflow-hidden rounded-[28px] bg-navy-deep p-[clamp(20px,2.6vw,36px)] text-white">
+      <div className="relative isolate overflow-hidden rounded-[28px] bg-navy-deep">
         <picture>
           <source type="image/avif" srcSet={srcSet("bg-hero", "avif")} sizes={HERO_SIZES} />
           <img
@@ -30,6 +30,7 @@ export function Hero() {
             className="absolute inset-0 -z-10 h-full w-full object-cover object-center mobile:object-[12%_center]"
           />
         </picture>
+        <div className="box-border flex min-h-[clamp(640px,56vw,840px)] flex-col justify-between gap-18 p-[clamp(20px,2.6vw,36px)] text-white">
         <nav aria-label="Principal" className="flex items-center justify-between gap-6">
           <a href="#topo" aria-label="KRIVO, início" className="flex min-h-11 items-center">
             <Image
@@ -79,6 +80,7 @@ export function Hero() {
               </a>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </header>
