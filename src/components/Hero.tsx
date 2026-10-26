@@ -55,6 +55,7 @@ export function Hero() {
             ))}
           </div>
           <WhatsAppLink
+            position="menu"
             className="inline-flex h-11 items-center rounded-full bg-white px-[22px] text-[15px] font-medium whitespace-nowrap text-navy transition-[translate,background-color] duration-250 ease-[ease] hover:-translate-y-0.5"
           >
             Quero crescer com a KRIVO
@@ -71,7 +72,7 @@ export function Hero() {
               desestruturados em marcas com autoridade, identidade e posicionamento.
             </p>
             <div className="flex flex-wrap gap-3">
-              <CtaLink />
+              <CtaLink position="topo" />
               <a
                 href="#servicos"
                 className="box-border inline-flex h-[54px] items-center rounded-full border border-[rgba(255,255,255,0.6)] bg-[rgba(26,44,85,0.55)] px-[26px] text-[16px] font-medium text-white transition-[translate,background-color] duration-250 ease-[ease] hover:-translate-y-0.5"

@@ -19,7 +19,7 @@ export function Footer() {
               Vamos fazer sua marca ser lembrada.
             </h2>
             <div className="flex">
-              <CtaLink />
+              <CtaLink position="rodape" />
             </div>
           </div>
           <div className="box-border flex flex-[0_1_340px] flex-col rounded-[20px] bg-white px-7 py-2 text-navy">
@@ -32,7 +32,7 @@ export function Footer() {
                   {contact.label}
                 </span>
                 {contact.whatsapp ? (
-                  <WhatsAppLink className="font-display text-[19px] font-normal tracking-[-0.02em]">
+                  <WhatsAppLink position="contato" className="font-display text-[19px] font-normal tracking-[-0.02em]">
                     {contact.value}
                   </WhatsAppLink>
                 ) : contact.href ? (
