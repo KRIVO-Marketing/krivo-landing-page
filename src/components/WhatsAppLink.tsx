@@ -1,19 +1,21 @@
 "use client";
 
 import { type CtaPosition, getRef, trackEvent } from "@/lib/analytics";
-import { getGreeting, getWhatsAppUrl, WHATSAPP_URL } from "@/lib/whatsapp";
+import { getGreeting, getWhatsAppUrl } from "@/lib/whatsapp";
 
 type WhatsAppLinkProps = {
   className?: string;
   position: CtaPosition;
+  /** Texto da mensagem pré-preenchida (sem a saudação). Padrão: mensagem da home. */
+  message?: string;
   children: React.ReactNode;
 };
 
-function applyGreeting(event: React.SyntheticEvent<HTMLAnchorElement>) {
-  event.currentTarget.href = getWhatsAppUrl(getGreeting(), getRef());
-}
+export function WhatsAppLink({ className, position, message, children }: WhatsAppLinkProps) {
+  function applyGreeting(event: React.SyntheticEvent<HTMLAnchorElement>) {
+    event.currentTarget.href = getWhatsAppUrl(getGreeting(), getRef(), message);
+  }
 
-export function WhatsAppLink({ className, position, children }: WhatsAppLinkProps) {
   function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
     applyGreeting(event);
     trackEvent("clique_diagnostico", { posicao: position, ref: getRef() });
@@ -21,7 +23,8 @@ export function WhatsAppLink({ className, position, children }: WhatsAppLinkProp
 
   return (
     <a
-      href={WHATSAPP_URL}
+      // Link neutro, usado na renderização inicial do servidor.
+      href={getWhatsAppUrl(undefined, undefined, message)}
       target="_blank"
       rel="noopener noreferrer"
       className={className}
