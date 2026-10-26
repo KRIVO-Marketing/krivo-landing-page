@@ -66,9 +66,10 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body>
-        {/* Google tag (gtag.js) */}
-        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
-        <Script id="google-tag" strategy="lazyOnload">
+        {/* Google tag (gtag.js). afterInteractive, não lazyOnload: quem chega pelo navegador do
+            Instagram e sai rápido (ou clica no WhatsApp logo) precisa contar como sessão. */}
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script id="google-tag" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
