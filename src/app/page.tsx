@@ -6,6 +6,7 @@ import { Hero } from "@/components/Hero";
 import { LazyBackgrounds } from "@/components/LazyBackgrounds";
 import { Method } from "@/components/Method";
 import { Services } from "@/components/Services";
+import { Team } from "@/components/Team";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <main>
         <About />
+        <Team />
         <Services />
         <Method />
         <Channels />

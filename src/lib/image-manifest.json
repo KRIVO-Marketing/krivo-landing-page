@@ -5,29 +5,29 @@
     "variants": [
       {
         "w": 960,
-        "avif": "/assets/bg-hero-960.6d5bbcf7.avif",
-        "avifBytes": 176230,
+        "avif": "/assets/bg-hero-960.f66f8e5f.avif",
+        "avifBytes": 176560,
         "webp": "/assets/bg-hero-960.06e721ac.webp",
         "webpBytes": 239970
       },
       {
         "w": 1440,
-        "avif": "/assets/bg-hero-1440.4ff8ab70.avif",
-        "avifBytes": 394713,
+        "avif": "/assets/bg-hero-1440.68140e29.avif",
+        "avifBytes": 396144,
         "webp": "/assets/bg-hero-1440.b9f56bb1.webp",
         "webpBytes": 546306
       },
       {
         "w": 1920,
-        "avif": "/assets/bg-hero-1920.f3e1e1d2.avif",
-        "avifBytes": 656741,
+        "avif": "/assets/bg-hero-1920.28cad919.avif",
+        "avifBytes": 656821,
         "webp": "/assets/bg-hero-1920.c8d6833e.webp",
         "webpBytes": 911070
       },
       {
         "w": 2400,
-        "avif": "/assets/bg-hero-2400.79424c64.avif",
-        "avifBytes": 1273364,
+        "avif": "/assets/bg-hero-2400.9fbdfa84.avif",
+        "avifBytes": 1275392,
         "webp": "/assets/bg-hero-2400.d2ebe4db.webp",
         "webpBytes": 1604390
       }
@@ -39,22 +39,22 @@
     "variants": [
       {
         "w": 1280,
-        "avif": "/assets/bg-close-1280.6f84c7f4.avif",
-        "avifBytes": 278738,
-        "webp": "/assets/bg-close-1280.250f1c68.webp",
-        "webpBytes": 380640
+        "avif": "/assets/bg-close-1280.f2239f02.avif",
+        "avifBytes": 280240,
+        "webp": "/assets/bg-close-1280.be54f3a2.webp",
+        "webpBytes": 380536
       },
       {
         "w": 1920,
-        "avif": "/assets/bg-close-1920.521c0a3f.avif",
-        "avifBytes": 585791,
+        "avif": "/assets/bg-close-1920.fd6c8989.avif",
+        "avifBytes": 586322,
         "webp": "/assets/bg-close-1920.38fa9672.webp",
         "webpBytes": 795462
       },
       {
         "w": 2400,
-        "avif": "/assets/bg-close-2400.97750d4d.avif",
-        "avifBytes": 1123875,
+        "avif": "/assets/bg-close-2400.d9b6e093.avif",
+        "avifBytes": 1125101,
         "webp": "/assets/bg-close-2400.e48a2a6e.webp",
         "webpBytes": 1419682
       }
@@ -66,22 +66,22 @@
     "variants": [
       {
         "w": 1280,
-        "avif": "/assets/bg-light-1280.06d410a9.avif",
-        "avifBytes": 253670,
-        "webp": "/assets/bg-light-1280.2ef82e97.webp",
-        "webpBytes": 358160
+        "avif": "/assets/bg-light-1280.417ab22c.avif",
+        "avifBytes": 255904,
+        "webp": "/assets/bg-light-1280.13faac34.webp",
+        "webpBytes": 358194
       },
       {
         "w": 1920,
-        "avif": "/assets/bg-light-1920.be41b8da.avif",
-        "avifBytes": 535674,
-        "webp": "/assets/bg-light-1920.8a147bb2.webp",
-        "webpBytes": 753220
+        "avif": "/assets/bg-light-1920.1d4bbe8e.avif",
+        "avifBytes": 538274,
+        "webp": "/assets/bg-light-1920.e08ba21c.webp",
+        "webpBytes": 753208
       },
       {
         "w": 2200,
-        "avif": "/assets/bg-light-2200.86bee1fe.avif",
-        "avifBytes": 854868,
+        "avif": "/assets/bg-light-2200.30d3b39d.avif",
+        "avifBytes": 857637,
         "webp": "/assets/bg-light-2200.1a2edebb.webp",
         "webpBytes": 1130002
       }
@@ -93,24 +93,104 @@
     "variants": [
       {
         "w": 480,
-        "avif": "/assets/sobre-480.50ca2100.avif",
-        "avifBytes": 88050,
+        "avif": "/assets/sobre-480.8032ac8f.avif",
+        "avifBytes": 88483,
         "webp": "/assets/sobre-480.952bbaf6.webp",
         "webpBytes": 153496
       },
       {
         "w": 880,
-        "avif": "/assets/sobre-880.62ce356b.avif",
-        "avifBytes": 329712,
-        "webp": "/assets/sobre-880.67743acb.webp",
-        "webpBytes": 525222
+        "avif": "/assets/sobre-880.51cbfe53.avif",
+        "avifBytes": 331088,
+        "webp": "/assets/sobre-880.c18525e2.webp",
+        "webpBytes": 525404
       },
       {
         "w": 1410,
-        "avif": "/assets/sobre-1410.0bd232aa.avif",
-        "avifBytes": 654927,
+        "avif": "/assets/sobre-1410.e95944d8.avif",
+        "avifBytes": 656537,
         "webp": "/assets/sobre-1410.98bb3d36.webp",
         "webpBytes": 924326
+      }
+    ]
+  },
+  "socio-1": {
+    "width": 900,
+    "height": 900,
+    "variants": [
+      {
+        "w": 450,
+        "avif": "/assets/socio-1-450.dde0cab3.avif",
+        "avifBytes": 12599,
+        "webp": "/assets/socio-1-450.9a162cf1.webp",
+        "webpBytes": 16190
+      },
+      {
+        "w": 900,
+        "avif": "/assets/socio-1-900.9bff60f8.avif",
+        "avifBytes": 27986,
+        "webp": "/assets/socio-1-900.29f77f20.webp",
+        "webpBytes": 41716
+      }
+    ]
+  },
+  "socio-2": {
+    "width": 900,
+    "height": 900,
+    "variants": [
+      {
+        "w": 450,
+        "avif": "/assets/socio-2-450.a0ca1dc2.avif",
+        "avifBytes": 14383,
+        "webp": "/assets/socio-2-450.1b279636.webp",
+        "webpBytes": 16760
+      },
+      {
+        "w": 900,
+        "avif": "/assets/socio-2-900.5cd3aa1f.avif",
+        "avifBytes": 40132,
+        "webp": "/assets/socio-2-900.2392b807.webp",
+        "webpBytes": 45120
+      }
+    ]
+  },
+  "socio-3": {
+    "width": 900,
+    "height": 900,
+    "variants": [
+      {
+        "w": 450,
+        "avif": "/assets/socio-3-450.180893c1.avif",
+        "avifBytes": 16292,
+        "webp": "/assets/socio-3-450.150e5766.webp",
+        "webpBytes": 22972
+      },
+      {
+        "w": 900,
+        "avif": "/assets/socio-3-900.b1964de8.avif",
+        "avifBytes": 37544,
+        "webp": "/assets/socio-3-900.70f0fbb0.webp",
+        "webpBytes": 61502
+      }
+    ]
+  },
+  "socio-4": {
+    "width": 900,
+    "height": 900,
+    "variants": [
+      {
+        "w": 450,
+        "avif": "/assets/socio-4-450.fdf342b3.avif",
+        "avifBytes": 10835,
+        "webp": "/assets/socio-4-450.ab1bdc09.webp",
+        "webpBytes": 13364
+      },
+      {
+        "w": 900,
+        "avif": "/assets/socio-4-900.5fed5a09.avif",
+        "avifBytes": 30377,
+        "webp": "/assets/socio-4-900.95d9333d.webp",
+        "webpBytes": 36322
       }
     ]
   }
