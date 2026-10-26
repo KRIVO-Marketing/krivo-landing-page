@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { preload } from "react-dom";
-import { HERO_SIZES, largest, srcSet } from "@/lib/images";
+import { largest } from "@/lib/images";
 import "./globals.css";
 
 const GA_ID = "G-86HVDHE5M5";
@@ -55,8 +55,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Imagem do LCP: sem o preload ela só seria descoberta depois do CSS.
-  preload(largest("bg-hero", "avif"), { as: "image", type: "image/avif", fetchPriority: "high", imageSrcSet: srcSet("bg-hero", "avif"), imageSizes: HERO_SIZES });
   preload("/fonts/albert-sans-latin.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
   preload("/fonts/lexend-latin.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
 
