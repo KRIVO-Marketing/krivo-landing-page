@@ -18,8 +18,10 @@ export function getGreeting(date: Date = new Date()): string {
   return "Boa noite";
 }
 
-export function getWhatsAppUrl(greeting: string = "Olá"): string {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`${greeting}! ${WHATSAPP_TEXT}`)}`;
+/** `ref` é o código de origem (ex.: ig-murilo), para os sócios contarem conversas por link. */
+export function getWhatsAppUrl(greeting: string = "Olá", ref?: string): string {
+  const text = `${greeting}! ${WHATSAPP_TEXT}${ref ? ` (ref: ${ref})` : ""}`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 }
 
 /** Link neutro, usado na renderização inicial do servidor. */
