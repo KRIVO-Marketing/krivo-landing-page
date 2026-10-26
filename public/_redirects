@@ -2,9 +2,9 @@
 # 302 de propósito: dá para trocar o destino (ex.: para /diagnostico) sem mexer nos perfis.
 # utm_content = dono do link; o código "ref" que vai na mensagem do WhatsApp sai daqui (ig-murilo etc.).
 
-/ig-krivo    /?utm_source=instagram&utm_medium=bio&utm_campaign=diagnostico&utm_content=krivo     302
-/ig-murilo   /?utm_source=instagram&utm_medium=bio&utm_campaign=diagnostico&utm_content=murilo    302
-/ig-gustavo  /?utm_source=instagram&utm_medium=bio&utm_campaign=diagnostico&utm_content=gustavo   302
-/in-murilo   /?utm_source=linkedin&utm_medium=perfil&utm_campaign=diagnostico&utm_content=murilo  302
-/in-gustavo  /?utm_source=linkedin&utm_medium=perfil&utm_campaign=diagnostico&utm_content=gustavo 302
-/in-krivo    /?utm_source=linkedin&utm_medium=pagina&utm_campaign=diagnostico&utm_content=krivo   302
+/ig-krivo    /diagnostico?utm_source=instagram&utm_medium=bio&utm_campaign=diagnostico&utm_content=krivo     302
+/ig-murilo   /diagnostico?utm_source=instagram&utm_medium=bio&utm_campaign=diagnostico&utm_content=murilo    302
+/ig-gustavo  /diagnostico?utm_source=instagram&utm_medium=bio&utm_campaign=diagnostico&utm_content=gustavo   302
+/in-murilo   /diagnostico?utm_source=linkedin&utm_medium=perfil&utm_campaign=diagnostico&utm_content=murilo  302
+/in-gustavo  /diagnostico?utm_source=linkedin&utm_medium=perfil&utm_campaign=diagnostico&utm_content=gustavo 302
+/in-krivo    /diagnostico?utm_source=linkedin&utm_medium=pagina&utm_campaign=diagnostico&utm_content=krivo   302
