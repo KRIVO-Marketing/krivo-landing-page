@@ -140,17 +140,17 @@
     "variants": [
       {
         "w": 450,
-        "avif": "/assets/socio-2-450.a0ca1dc2.avif",
-        "avifBytes": 14383,
-        "webp": "/assets/socio-2-450.1b279636.webp",
-        "webpBytes": 16760
+        "avif": "/assets/socio-2-450.77b36070.avif",
+        "avifBytes": 14167,
+        "webp": "/assets/socio-2-450.6bacafc1.webp",
+        "webpBytes": 16214
       },
       {
         "w": 900,
-        "avif": "/assets/socio-2-900.5cd3aa1f.avif",
-        "avifBytes": 40132,
-        "webp": "/assets/socio-2-900.2392b807.webp",
-        "webpBytes": 45120
+        "avif": "/assets/socio-2-900.964b1224.avif",
+        "avifBytes": 39106,
+        "webp": "/assets/socio-2-900.7d4325a7.webp",
+        "webpBytes": 44416
       }
     ]
   },
