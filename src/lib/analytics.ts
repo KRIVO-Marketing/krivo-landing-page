@@ -6,7 +6,7 @@ declare global {
 }
 
 /** Onde o botão do WhatsApp foi clicado; vira o parâmetro `posicao` do evento no GA4. */
-export type CtaPosition = "menu" | "topo" | "rodape" | "contato";
+export type CtaPosition = "menu" | "topo" | "meio" | "rodape" | "contato" | "fixo";
 
 // Prefixo do código de origem por utm_source (ex.: instagram + murilo → ig-murilo).
 const SOURCE_PREFIX: Record<string, string> = {
