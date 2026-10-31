@@ -1,5 +1,6 @@
 import { About } from "@/components/About";
 import { Channels } from "@/components/Channels";
+import { Clients } from "@/components/Clients";
 import { Footer } from "@/components/Footer";
 import { GradualBlur } from "@/components/GradualBlur";
 import { Hero } from "@/components/Hero";
@@ -20,6 +21,7 @@ export default function Home() {
         <Team />
         <Services />
         <Method />
+        <Clients />
         <Channels />
       </main>
       <Footer />
