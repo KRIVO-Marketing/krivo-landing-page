@@ -61,8 +61,10 @@ const backPill =
   "inline-flex h-11 items-center gap-2 rounded-full bg-cloud px-4 text-[15px] font-medium text-navy ring-1 ring-line transition-colors duration-250 hover:bg-[#e4e9f6] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy";
 
 /** Textura da KRIVO como imagem no HTML (mesma técnica do hero da home): não depende de JavaScript para aparecer. */
-function Texture({ name, priority = false, imgClassName = "" }: { name: "bg-hero" | "bg-close"; priority?: boolean; imgClassName?: string }) {
-  const sizes = "(max-width: 1200px) 100vw, 1200px";
+function Texture({ name, priority = false, tall = false, imgClassName = "" }: { name: "bg-hero" | "bg-close"; priority?: boolean; tall?: boolean; imgClassName?: string }) {
+  // Card alto e estreito (celular): object-cover escala pela ALTURA, então a imagem renderiza ~1,6x a altura em largura.
+  // Sem isso o navegador escolheria a variante de 960px e ampliaria quase 2x (granulado borrado).
+  const sizes = tall ? "(max-width: 899px) 1400px, (max-width: 1200px) 100vw, 1200px" : "(max-width: 1200px) 100vw, 1200px";
   return (
     <span aria-hidden className="pointer-events-none absolute inset-0 -z-10 block">
       <picture>
@@ -97,19 +99,19 @@ function RankLadder({ client }: { client: Client }) {
         return (
           <div
             key={pos}
-            className={`flex h-[52px] items-center gap-3 rounded-2xl px-4 ${
+            className={`flex h-[52px] items-center gap-2.5 rounded-2xl px-4 min-[480px]:gap-3 ${
               now ? "bg-white text-navy shadow-[0_12px_32px_rgba(10,20,50,0.35)]" : "border border-white/25 bg-[rgba(26,44,85,0.65)] text-white"
             } ${before ? "border-dashed" : ""}`}
           >
-            <span className="w-8 font-display text-[17px] tracking-[-0.02em]">{pos}º</span>
+            <span className="w-6 shrink-0 font-display text-[17px] tracking-[-0.02em] min-[480px]:w-8">{pos}º</span>
             {now ? (
               <>
                 {client.logo && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={client.logo} alt="" width={28} height={28} className="size-7 rounded-full object-cover" />
                 )}
-                <span className="font-display text-[16px] font-normal tracking-[-0.02em]">{client.name}</span>
-                <span className="ml-auto text-[14px] font-medium">agora</span>
+                <span className="font-display text-[15px] font-normal tracking-[-0.02em] whitespace-nowrap min-[480px]:text-[16px]">{client.name}</span>
+                <span className="ml-auto text-[13px] font-medium min-[480px]:text-[14px]">agora</span>
               </>
             ) : before ? (
               <span className="text-[14px]">antes</span>
@@ -164,8 +166,8 @@ export default async function ClientPage({ params }: PageProps<"/clientes/[slug]
           aria-labelledby="resultado"
           className="relative isolate box-border grid gap-x-12 gap-y-12 overflow-hidden rounded-[28px] bg-navy-deep p-[clamp(24px,4vw,56px)] text-white min-[900px]:grid-cols-[1.25fr_1fr] min-[900px]:items-end"
         >
-          {/* Zoom ancorado à esquerda: o lado claro do granulado sai do quadro e o escuro fica atrás do conteúdo */}
-          <Texture name="bg-hero" priority imgClassName="origin-left scale-[1.25]" />
+          {/* Zoom (só no desktop) ancorado à esquerda: o lado claro do granulado sai do quadro e o escuro fica atrás do conteúdo */}
+          <Texture name="bg-hero" priority tall imgClassName="origin-left min-[900px]:scale-[1.25]" />
           <span aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(26,44,85,0.55),rgba(26,44,85,0)_65%)]" />
           <div className="flex flex-col gap-[clamp(32px,5vw,64px)]">
             <h1 className="font-display text-[clamp(28px,3.4vw,44px)] leading-[1.1] font-normal tracking-[-0.03em] text-shadow-halo">{client.name}</h1>
