@@ -11,9 +11,11 @@ export type Client = {
   /** Frase curta que aparece no card do mural. */
   summary: string;
   /** Destaque principal do case: número ou posição grande + legenda. */
-  highlight: { value: string; label: string };
+  highlight: { value: string; label: string; /** Legenda curta para o card do mural. */ short?: string };
   /** Contexto e resultado, um parágrafo por item. */
   story: string[];
+  /** Posições no ranking do Google, para a escada visual do case. */
+  rank?: { from: number; to: number; slots: number };
   /** Números de apoio exibidos em linha abaixo do destaque. */
   facts?: { value: string; label: string }[];
   /** Links públicos do cliente. */
@@ -21,7 +23,7 @@ export type Client = {
   /** Um bloco por canal: manchete de impacto, o que foi feito e os pontos fortes. */
   channels: { service: ClientService; headline: string; delivered: string; points: string[] }[];
   /** Bloco de SEO / AEO (busca tradicional e assistentes de IA). */
-  seo?: { title: string; intro: string; items: { title: string; text: string }[] };
+  seo?: { title: string; intro?: string; items: { title: string; text: string }[] };
   /** Estratégia complementar (ex.: coleta de avaliações). */
   strategy?: { title: string; text: string };
 };
@@ -34,7 +36,8 @@ export const clients: Client[] = [
     logo: "/clients/quintana.webp",
     services: ["Google Meu Negócio", "Instagram", "Site"],
     summary: "Fortalecimento digital completo: Google, Instagram e site.",
-    highlight: { value: "3º → 2º", label: "posição no Google na região, com 1 semana de contrato" },
+    highlight: { value: "5º → 2º", label: "posição no Google na região, com 1 semana de contrato", short: "posição no Google em 1 semana" },
+    rank: { from: 5, to: 2, slots: 5 },
     facts: [
       { value: "4,9", label: "nota no Google" },
       { value: "45", label: "avaliações no Google" },
@@ -44,8 +47,8 @@ export const clients: Client[] = [
       { label: "Instagram", href: "https://www.instagram.com/barbearia_quintana/" },
     ],
     story: [
-      "Com uma semana de contrato, otimizando Google Meu Negócio, Instagram e site de forma alinhada, a Barbearia Quintana subiu da terceira para a segunda posição no Google na região.",
-      "O resultado veio mesmo com menos avaliações que o perfil que estava logo acima na lista anterior: a otimização integrada dos três canais fez a diferença.",
+      "Perfil, Instagram e site passaram a contar a mesma história. O Google entendeu, e a Quintana subiu três posições mesmo com menos avaliações que o perfil à frente.",
+      "Tudo foi feito em uma semana de contrato, com Google Meu Negócio, Instagram e site otimizados de forma alinhada.",
     ],
     channels: [
       {
@@ -55,7 +58,6 @@ export const clients: Client[] = [
         points: [
           "Comentários citam atendimento, ambiente e preço justo.",
           "Clube Quintana com planos e preços no próprio perfil.",
-          "Telefone, horário, rotas e site completos.",
         ],
       },
       {
@@ -65,7 +67,6 @@ export const clients: Client[] = [
         points: [
           "Bio direta, com serviços, horário e link do site.",
           "Destaques organizados: Quintana, Agendamento, Cortes.",
-          "Vídeos do espaço, série temática e anúncio do novo site.",
         ],
       },
       {
@@ -75,19 +76,15 @@ export const clients: Client[] = [
         points: [
           "Cliente escolhe serviço, dia e horário e envia a mensagem pronta.",
           "Textos e perguntas frequentes escritos para as buscas locais.",
-          "Avaliações do Google em destaque, com botão para avaliar.",
         ],
       },
     ],
     seo: {
       title: "Fácil de encontrar, em qualquer lugar que o cliente procure",
-      intro: "Google, Instagram e site trabalham juntos: quem busca barbearia em Campinas encontra a Quintana, entende o que ela oferece e agenda sem esforço, seja pela busca, pelas redes ou pelo ChatGPT.",
       items: [
         { title: "Aparece na busca da cidade", text: "\"Barbearia em Campinas\" está no site, no perfil do Google e na bio do Instagram, as palavras que o cliente realmente digita." },
         { title: "Mesmas informações em todo lugar", text: "Endereço, telefone, horário e preços iguais no Google, no Instagram e no site, o que passa confiança para o cliente e para o Google." },
-        { title: "Dúvidas respondidas antes", text: "Preço, horário, pagamento e como agendar já estão explicados no site, sem o cliente precisar perguntar." },
         { title: "Pronto para as IAs", text: "ChatGPT, Gemini e outros assistentes conseguem ler e responder certo sobre a barbearia: endereço, horários, preços e Clube." },
-        { title: "Avaliações que sustentam o resultado", text: "A nota 4,9 do Google também aparece no site, e a plaquinha de NFC traz novas avaliações todo mês." },
         { title: "Do Google ao agendamento", text: "O Google e o Instagram levam ao site, e o site leva direto ao WhatsApp, sem caminho perdido." },
       ],
     },
