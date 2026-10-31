@@ -66,14 +66,6 @@
   --color-line-strong: rgba(34, 56, 98, 0.2);
 
   --text-shadow-halo: 0 0 2px #22386b, 0 0 12px #22386b, 0 0 20px #22386b;
-
-  --animate-marquee: marquee 48s linear infinite;
-
-  @keyframes marquee {
-    to {
-      transform: translateX(-50%);
-    }
-  }
 }
 
 @layer base {
