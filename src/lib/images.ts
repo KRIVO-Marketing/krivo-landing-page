@@ -12,6 +12,10 @@ export function largest(name: Name, format: "avif" | "webp") {
   return variants[variants.length - 1][format];
 }
 
+export function smallest(name: Name, format: "avif" | "webp") {
+  return manifest[name].variants[0][format];
+}
+
 export function dimensions(name: Name) {
   return { width: manifest[name].width, height: manifest[name].height };
 }

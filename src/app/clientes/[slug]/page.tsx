@@ -196,7 +196,7 @@ export default async function ClientPage({ params }: PageProps<"/clientes/[slug]
           <p className="max-w-[14em] font-display text-[clamp(26px,3.4vw,44px)] leading-[1.1] font-normal tracking-[-0.03em]">
             Sua marca pode ser o próximo case.
           </p>
-          <CtaLink />
+          <CtaLink position="rodape" />
         </div>
       </main>
       <LazyBackgrounds />

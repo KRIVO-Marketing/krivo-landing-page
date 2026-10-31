@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { preload } from "react-dom";
-import { HERO_SIZES, largest, srcSet } from "@/lib/images";
+import { largest } from "@/lib/images";
 import "./globals.css";
 
 const GA_ID = "G-86HVDHE5M5";
@@ -55,8 +55,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Imagem do LCP: sem o preload ela só seria descoberta depois do CSS.
-  preload(largest("bg-hero", "avif"), { as: "image", type: "image/avif", fetchPriority: "high", imageSrcSet: srcSet("bg-hero", "avif"), imageSizes: HERO_SIZES });
   preload("/fonts/albert-sans-latin.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
   preload("/fonts/lexend-latin.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
 
@@ -66,9 +64,10 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body>
-        {/* Google tag (gtag.js) */}
-        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
-        <Script id="google-tag" strategy="lazyOnload">
+        {/* Google tag (gtag.js). afterInteractive, não lazyOnload: quem chega pelo navegador do
+            Instagram e sai rápido (ou clica no WhatsApp logo) precisa contar como sessão. */}
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script id="google-tag" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
