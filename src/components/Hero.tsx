@@ -31,6 +31,8 @@ export function Hero() {
             className="absolute inset-0 -z-10 h-full w-full object-cover object-center mobile:object-[12%_center]"
           />
         </picture>
+        {/* Véu suave no topo: acalma o granulado atrás do menu */}
+        <span aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-40 bg-[linear-gradient(180deg,rgba(26,44,85,0.75),rgba(26,44,85,0))]" />
         <div className="box-border flex min-h-[clamp(640px,56vw,840px)] flex-col justify-between gap-18 p-[clamp(20px,2.6vw,36px)] text-white">
         <nav aria-label="Principal" className="flex items-center justify-between gap-6">
           <a href="#topo" aria-label="KRIVO, início" className="flex min-h-11 items-center">
@@ -44,12 +46,12 @@ export function Hero() {
               className="block h-[26px] w-auto"
             />
           </a>
-          <div className="flex items-center gap-10 text-[15px] font-medium text-shadow-halo mobile:hidden">
+          <div className="flex items-center gap-2 text-[15px] font-medium text-shadow-halo mobile:hidden">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="py-3 text-white opacity-90 transition-opacity duration-200 ease-[ease] hover:opacity-100"
+                className="inline-flex h-11 items-center px-4 text-white transition-opacity duration-200 ease-[ease] hover:opacity-70"
               >
                 {link.label}
               </a>
