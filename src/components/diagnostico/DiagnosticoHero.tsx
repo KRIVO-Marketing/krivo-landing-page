@@ -1,8 +1,6 @@
 import Image from "next/image";
-import { smallest, srcSet } from "@/lib/images";
 import { CTA_NOTE, DiagnosticoCta } from "./DiagnosticoCta";
-
-const partners = ["socio-1", "socio-2", "socio-3", "socio-4"] as const;
+import { PartnersLine } from "./PartnersLine";
 
 export function DiagnosticoHero() {
   return (
@@ -34,28 +32,7 @@ export function DiagnosticoHero() {
                 <DiagnosticoCta position="topo" className="self-start" />
                 <p className="text-[15px] text-white/85">{CTA_NOTE}</p>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="flex shrink-0">
-                  {partners.map((name, i) => (
-                    <picture key={name} className={`block shrink-0 ${i > 0 ? "-ml-3" : ""}`}>
-                      <source type="image/avif" srcSet={srcSet(name, "avif")} sizes="44px" />
-                      <img
-                        src={smallest(name, "webp")}
-                        srcSet={srcSet(name, "webp")}
-                        sizes="44px"
-                        alt=""
-                        width={44}
-                        height={44}
-                        decoding="async"
-                        className="block size-11 rounded-full bg-mist object-cover object-top ring-2 ring-navy-deep"
-                      />
-                    </picture>
-                  ))}
-                </div>
-                <p className="text-[15px] leading-snug text-white/85">
-                  Quem te atende são os sócios da Krivo, aqui de Campinas.
-                </p>
-              </div>
+              <PartnersLine />
             </div>
           </div>
         </div>

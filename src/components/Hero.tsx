@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { HERO_SIZES, dimensions, largest, srcSet } from "@/lib/images";
 import { CtaLink } from "./CtaLink";
+import { PartnersLine } from "./diagnostico/PartnersLine";
 import { WhatsAppLink } from "./WhatsAppLink";
 
 const navLinks = [
@@ -80,6 +81,7 @@ export function Hero() {
                 Ver serviços
               </a>
             </div>
+            <PartnersLine />
           </div>
         </div>
         </div>

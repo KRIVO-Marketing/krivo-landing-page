@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowIcon } from "@/components/ArrowIcon";
-import { CtaLink } from "@/components/CtaLink";
+import { CTA_NOTE, DiagnosticoCta } from "@/components/diagnostico/DiagnosticoCta";
+import { PartnersLine } from "@/components/diagnostico/PartnersLine";
+import { Texture } from "@/components/Texture";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
-import { clients, getClient, type Client, type ClientService } from "@/lib/clients";
-import { dimensions, largest, srcSet } from "@/lib/images";
+import { clients, getClient, type ClientService } from "@/lib/clients";
 
 export const dynamicParams = false;
 
@@ -60,71 +61,6 @@ const section = "flex flex-col gap-[clamp(28px,4vw,48px)]";
 const backPill =
   "inline-flex h-11 items-center gap-2 rounded-full bg-cloud px-4 text-[15px] font-medium text-navy ring-1 ring-line transition-colors duration-250 hover:bg-[#e4e9f6] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy";
 
-/** Textura da KRIVO como imagem no HTML (mesma técnica do hero da home): não depende de JavaScript para aparecer. */
-function Texture({ name, priority = false, tall = false, imgClassName = "" }: { name: "bg-hero" | "bg-close"; priority?: boolean; tall?: boolean; imgClassName?: string }) {
-  // Card alto e estreito (celular): object-cover escala pela ALTURA, então a imagem renderiza ~1,6x a altura em largura.
-  // Sem isso o navegador escolheria a variante de 960px e ampliaria quase 2x (granulado borrado).
-  const sizes = tall ? "(max-width: 899px) 1400px, (max-width: 1200px) 100vw, 1200px" : "(max-width: 1200px) 100vw, 1200px";
-  return (
-    <span aria-hidden className="pointer-events-none absolute inset-0 -z-10 block">
-      <picture>
-        <source type="image/avif" srcSet={srcSet(name, "avif")} sizes={sizes} />
-        <img
-          src={largest(name, "webp")}
-          srcSet={srcSet(name, "webp")}
-          sizes={sizes}
-          alt=""
-          width={dimensions(name).width}
-          height={dimensions(name).height}
-          loading={priority ? "eager" : "lazy"}
-          fetchPriority={priority ? "high" : "auto"}
-          decoding="async"
-          className={`block h-full w-full object-cover object-center ${imgClassName}`}
-        />
-      </picture>
-    </span>
-  );
-}
-
-/** Escada do ranking no Google: a marca sobe de `from` para `to`. */
-function RankLadder({ client }: { client: Client }) {
-  if (!client.rank) return null;
-  const { from, to, slots } = client.rank;
-  return (
-    <div className="flex w-full max-w-[360px] flex-col gap-2" role="img" aria-label={`Ranking no Google: de ${from}º para ${to}º lugar`}>
-      <span className="mb-1 w-fit rounded-full bg-[rgba(26,44,85,0.65)] px-3 py-1 text-[14px] tracking-[0.08em] text-white uppercase">Ranking no Google, na região</span>
-      {Array.from({ length: slots }, (_, i) => i + 1).map((pos) => {
-        const now = pos === to;
-        const before = pos === from;
-        return (
-          <div
-            key={pos}
-            className={`flex h-[52px] items-center gap-2.5 rounded-2xl px-4 min-[480px]:gap-3 ${
-              now ? "bg-white text-navy shadow-[0_12px_32px_rgba(10,20,50,0.35)]" : "border border-white/25 bg-[rgba(26,44,85,0.65)] text-white"
-            } ${before ? "border-dashed" : ""}`}
-          >
-            <span className="w-6 shrink-0 font-display text-[17px] tracking-[-0.02em] min-[480px]:w-8">{pos}º</span>
-            {now ? (
-              <>
-                {client.logo && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={client.logo} alt="" width={28} height={28} className="size-7 rounded-full object-cover" />
-                )}
-                <span className="font-display text-[15px] font-normal tracking-[-0.02em] whitespace-nowrap min-[480px]:text-[16px]">{client.name}</span>
-                <span className="ml-auto text-[13px] font-medium min-[480px]:text-[14px]">agora</span>
-              </>
-            ) : before ? (
-              <span className="text-[14px]">antes</span>
-            ) : (
-              <span className="text-[14px] text-white/80">outro perfil</span>
-            )}
-          </div>
-        );
-      })}
-    </div>
-  );
-}
-
 export default async function ClientPage({ params }: PageProps<"/clientes/[slug]">) {
   const client = getClient((await params).slug);
   if (!client) notFound();
@@ -161,34 +97,20 @@ export default async function ClientPage({ params }: PageProps<"/clientes/[slug]
       </header>
 
       <main className="mx-auto box-border flex max-w-[1200px] flex-col gap-[clamp(56px,6vw,96px)] px-[clamp(20px,4vw,48px)] pt-6 pb-[clamp(48px,6vw,96px)]">
-        {/* Resultado: único bloco texturizado da página, junto com o CTA final */}
-        <section
-          aria-labelledby="resultado"
-          className="relative isolate box-border grid gap-x-12 gap-y-12 overflow-hidden rounded-[28px] bg-navy-deep p-[clamp(24px,4vw,56px)] text-white min-[900px]:grid-cols-[1.25fr_1fr] min-[900px]:items-end"
-        >
-          {/* Zoom (só no desktop) ancorado à esquerda: o lado claro do granulado sai do quadro e o escuro fica atrás do conteúdo */}
-          <Texture name="bg-hero" priority tall imgClassName="origin-left min-[900px]:scale-[1.25]" />
-          <span aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(26,44,85,0.55),rgba(26,44,85,0)_65%)]" />
-          <div className="flex flex-col gap-[clamp(32px,5vw,64px)]">
-            <h1 className="font-display text-[clamp(28px,3.4vw,44px)] leading-[1.1] font-normal tracking-[-0.03em] text-shadow-halo">{client.name}</h1>
-
-            <div className="flex flex-col gap-4">
-              <p id="resultado" className="font-display text-[clamp(72px,12vw,176px)] leading-[0.92] font-light tracking-[-0.05em]">
-                {client.highlight.value}
-              </p>
-              <p className="max-w-[22em] text-[clamp(18px,1.7vw,22px)] leading-[1.4] font-medium text-white text-shadow-halo">{client.highlight.short ?? client.highlight.label}</p>
-              {client.facts && (
-                <p className="m-0 flex flex-wrap gap-x-6 gap-y-1 text-[17px] leading-none font-medium text-white text-shadow-halo">
-                  {client.facts.map((f) => (
-                    <span key={f.label}>
-                      <strong className="font-display text-[22px] font-normal tracking-[-0.02em]">{f.value}</strong> {f.label}
-                    </span>
-                  ))}
-                </p>
-              )}
-            </div>
-          </div>
-          <RankLadder client={client} />
+        {/* Cabeçalho simples: nome do cliente e números de apoio */}
+        <section aria-labelledby="cliente" className="flex flex-col gap-4 pt-[clamp(16px,3vw,40px)]">
+          <h1 id="cliente" className="font-display text-[clamp(40px,6vw,80px)] leading-[1.02] font-normal tracking-[-0.04em]">
+            {client.name}
+          </h1>
+          {client.facts && (
+            <p className="m-0 flex flex-wrap gap-x-6 gap-y-1 text-[17px] leading-none font-medium text-navy/80">
+              {client.facts.map((f) => (
+                <span key={f.label}>
+                  <strong className="font-display text-[22px] font-normal tracking-[-0.02em] text-navy">{f.value}</strong> {f.label}
+                </span>
+              ))}
+            </p>
+          )}
         </section>
 
         {/* História: etiqueta acima, destaque à esquerda e apoio + links à direita */}
@@ -223,6 +145,65 @@ export default async function ClientPage({ params }: PageProps<"/clientes/[slug]
             </div>
           </div>
         </section>
+
+        {/* Prova: print do Google e vídeos produzidos */}
+        {(client.proof || client.videos) && (
+          <section aria-labelledby="prova" className={section}>
+            <div className="flex flex-col gap-3">
+              <p className={eyebrow}>Na prática</p>
+              <h2 id="prova" className={`${sectionTitle} max-w-[16em]`}>
+                O resultado no Google e o conteúdo que criamos.
+              </h2>
+            </div>
+            {client.proof && (
+              <div className="grid items-center gap-x-16 gap-y-8 min-[900px]:grid-cols-[minmax(0,565px)_1fr]">
+                <figure className="m-0">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={client.proof.src}
+                    alt={client.proof.alt}
+                    width={client.proof.width}
+                    height={client.proof.height}
+                    loading="lazy"
+                    decoding="async"
+                    className="block h-auto w-full rounded-[20px] ring-1 ring-line"
+                  />
+                </figure>
+                <div className="flex flex-col gap-3">
+                  {client.rank && (
+                    <p className="font-display text-[clamp(56px,8vw,112px)] leading-[0.95] font-light tracking-[-0.05em]">
+                      {client.rank.from}º <span aria-hidden>→</span> {client.rank.to}º
+                      <span className="sr-only"> lugar</span>
+                    </p>
+                  )}
+                  <p className="max-w-[24em] text-[17px] leading-[1.5] text-navy/80">{client.proof.caption}</p>
+                </div>
+              </div>
+            )}
+            {client.videos && (
+              <div className="flex flex-col gap-4">
+                <h3 className="font-display text-[clamp(22px,2.2vw,28px)] leading-[1.2] font-normal tracking-[-0.025em]">Vídeos feitos para a {client.name.replace(/^Barbearia /, "")}</h3>
+                <div className="grid items-start gap-6 min-[900px]:grid-cols-[3.16fr_1fr]">
+                  {client.videos.map((v) => (
+                    <video
+                      key={v.src}
+                      controls
+                      playsInline
+                      preload="none"
+                      poster={v.poster}
+                      width={v.width}
+                      height={v.height}
+                      aria-label={v.title}
+                      className={`block h-auto w-full rounded-[20px] bg-navy-deep ring-1 ring-line ${v.height > v.width ? "mx-auto max-w-[360px] min-[900px]:max-w-none" : ""}`}
+                    >
+                      <source src={v.src} type="video/mp4" />
+                    </video>
+                  ))}
+                </div>
+              </div>
+            )}
+          </section>
+        )}
 
         {/* Canais: colunas separadas por linhas finas, sem caixas */}
         <section aria-labelledby="canais" className={section}>
@@ -293,12 +274,23 @@ export default async function ClientPage({ params }: PageProps<"/clientes/[slug]
         )}
 
         {/* CTA final: segundo e último bloco texturizado */}
-        <section className="relative isolate box-border flex flex-wrap items-center justify-between gap-8 overflow-hidden rounded-[28px] bg-navy-deep p-[clamp(28px,5vw,64px)] text-white">
+        <section className="relative isolate box-border flex flex-col gap-[clamp(24px,2.8vw,40px)] overflow-hidden rounded-[28px] bg-navy-deep p-[clamp(28px,5vw,64px)] text-white">
           <Texture name="bg-close" />
-          <h2 className="max-w-[12em] font-display text-[clamp(30px,4vw,52px)] leading-[1.08] font-normal tracking-[-0.035em] text-shadow-halo">
+          {/* Escurece o lado do texto para manter a leitura sobre o granulado */}
+          <span aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(26,44,85,0.7),rgba(26,44,85,0)_75%)]" />
+          <h2 className="max-w-[13em] font-display text-[clamp(36px,5.2vw,72px)] leading-[1.04] font-normal tracking-[-0.04em] text-shadow-halo">
             Sua marca pode ser o próximo case.
           </h2>
-          <CtaLink position="rodape" />
+          <div className="flex max-w-[560px] flex-col gap-7">
+            <p className="text-[clamp(17px,1.4vw,20px)] leading-normal text-white text-shadow-halo">
+              Diagnóstico gratuito do seu Instagram, perfil no Google e site, para negócios locais de Campinas e região.
+            </p>
+            <div className="flex flex-col gap-3">
+              <DiagnosticoCta position="rodape" className="self-start" />
+              <p className="text-[15px] text-white/85">{CTA_NOTE}</p>
+            </div>
+            <PartnersLine />
+          </div>
         </section>
       </main>
     </div>

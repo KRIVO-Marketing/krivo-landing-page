@@ -16,6 +16,10 @@ export type Client = {
   story: string[];
   /** Posições no ranking do Google, para a escada visual do case. */
   rank?: { from: number; to: number; slots: number };
+  /** Print da busca no Google, como prova do ranking. */
+  proof?: { src: string; width: number; height: number; alt: string; caption: string };
+  /** Vídeos produzidos para o cliente (mp4 + capa em /public). */
+  videos?: { src: string; poster: string; width: number; height: number; title: string }[];
   /** Números de apoio exibidos em linha abaixo do destaque. */
   facts?: { value: string; label: string }[];
   /** Links públicos do cliente. */
@@ -41,6 +45,17 @@ export const clients: Client[] = [
     facts: [
       { value: "4,9", label: "nota no Google" },
       { value: "45", label: "avaliações no Google" },
+    ],
+    proof: {
+      src: "/clients/quintana/ranking-google.webp",
+      width: 565,
+      height: 306,
+      alt: "Resultado do Google em Campinas: a Barbearia Quintana, com nota 4,9 e 45 avaliações, aparece em segundo lugar, logo abaixo da Barbearia Zero19.",
+      caption: "Busca real no Google, hoje. Antes do trabalho, a Quintana aparecia em 5º.",
+    },
+    videos: [
+      { src: "/clients/quintana/video-horizontal.mp4", poster: "/clients/quintana/video-horizontal.webp", width: 1280, height: 720, title: "Vídeo institucional da Barbearia Quintana" },
+      { src: "/clients/quintana/video-vertical.mp4", poster: "/clients/quintana/video-vertical.webp", width: 720, height: 1280, title: "Vídeo vertical da Barbearia Quintana para Instagram" },
     ],
     links: [
       { label: "Site", href: "https://barbeariaquintana.com.br" },
