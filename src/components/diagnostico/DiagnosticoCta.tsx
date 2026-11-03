@@ -24,7 +24,7 @@ export function DiagnosticoCta({ position, tone = "light", className = "" }: Dia
     <WhatsAppLink
       position={position}
       message={DIAGNOSTICO_TEXT}
-      className={`inline-flex h-[56px] items-center justify-between gap-3.5 rounded-full pr-2 pl-[26px] text-[16px] font-medium transition-[translate] duration-250 ease-[ease] hover:-translate-y-0.5 mobile:w-full ${colors} ${className}`}
+      className={`inline-flex h-[56px] items-center justify-between gap-2.5 rounded-full pr-2 pl-5 text-[13px] font-medium whitespace-nowrap min-[380px]:text-[14px] min-[460px]:gap-3.5 min-[460px]:pl-[26px] min-[460px]:text-[16px] transition-[translate] duration-250 ease-[ease] hover:-translate-y-0.5 mobile:w-full ${colors} ${className}`}
     >
       {CTA_LABEL}
       <span className={`inline-flex size-[40px] shrink-0 items-center justify-center rounded-full ${iconColors}`}>
