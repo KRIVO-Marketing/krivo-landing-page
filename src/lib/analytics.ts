@@ -9,7 +9,7 @@ declare global {
 export type CtaPosition = "menu" | "topo" | "meio" | "rodape" | "contato" | "fixo";
 
 // Prefixo do código de origem por utm_source (ex.: instagram + murilo → ig-murilo).
-const SOURCE_PREFIX: Record<string, string> = {
+export const SOURCE_PREFIX: Record<string, string> = {
   instagram: "ig",
   linkedin: "in",
   google: "g",
