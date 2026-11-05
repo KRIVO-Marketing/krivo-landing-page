@@ -80,7 +80,7 @@ export function Results() {
   return (
     <section
       id="resultados"
-      className="mx-auto box-border max-w-[1320px] px-[clamp(20px,4vw,48px)] py-[clamp(72px,10vw,160px)]"
+      className="mx-auto box-border max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(72px,10vw,160px)]"
     >
       <h2 className="max-w-[14em] pb-[clamp(40px,5vw,72px)] font-display text-[clamp(32px,4.4vw,64px)] leading-[1.06] font-light tracking-[-0.035em]">
         Resultado de verdade, <span className="text-muted">não promessa.</span>

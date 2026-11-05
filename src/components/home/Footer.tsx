@@ -65,7 +65,7 @@ export function Footer() {
           />
           <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-2 border-t border-[rgba(255,255,255,0.4)] pt-5 text-[14px] font-medium text-shadow-halo">
             <span>© 2026 KRIVO Marketing Digital · Campinas, SP</span>
-            <span>Instagram, Google e site para negócios de Campinas e região.</span>
+            <span>Ser visto, reconhecido e lembrado.</span>
             <a
               href="#topo"
               className="inline-flex min-h-11 items-center text-white opacity-90 hover:opacity-100"

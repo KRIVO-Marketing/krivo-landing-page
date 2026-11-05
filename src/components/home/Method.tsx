@@ -1,3 +1,5 @@
+import { DiagnosticoCta } from "@/components/shared/DiagnosticoCta";
+
 const steps = [
   {
     title: "Diagnóstico gratuito",
@@ -26,22 +28,36 @@ export function Method() {
             Como a gente trabalha, em quatro etapas.
           </h2>
         </div>
-        <ol className="m-0 flex list-none flex-wrap gap-3 p-0">
-          {steps.map((step, index) => (
-            <li
-              key={step.title}
-              className="box-border flex min-h-[250px] flex-[1_1_230px] flex-col justify-between gap-10 rounded-[20px] border border-line-soft bg-white p-7"
-            >
-              <span className="text-[14px] text-muted">{String(index + 1).padStart(2, "0")}</span>
-              <div className="flex flex-col gap-2.5">
-                <h3 className="font-display text-[24px] font-normal tracking-[-0.025em]">
-                  {step.title}
-                </h3>
-                <p className="min-h-[4.65em] text-[15px] leading-[1.55] text-muted">{step.text}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
+        <div className="flex flex-col gap-3">
+          <ol className="m-0 flex list-none flex-wrap gap-3 p-0">
+            {steps.map((step, index) => (
+              <li
+                key={step.title}
+                className="box-border flex min-h-[250px] flex-[1_1_230px] flex-col justify-between gap-10 rounded-[20px] border border-line-soft bg-white p-7"
+              >
+                <span className="text-[14px] text-muted">{String(index + 1).padStart(2, "0")}</span>
+                <div className="flex flex-col gap-2.5">
+                  <h3 className="font-display text-[24px] font-normal tracking-[-0.025em]">
+                    {step.title}
+                  </h3>
+                  <p className="min-h-[4.65em] text-[15px] leading-[1.55] text-muted">{step.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          {/* Decisão depois do diagnóstico: em cartão branco, texto corrido não fica sobre o granulado */}
+          <div className="box-border flex flex-col gap-6 rounded-[20px] border border-line-soft bg-white p-[clamp(24px,4vw,48px)]">
+            <h3 className="font-display text-[clamp(26px,3vw,40px)] leading-[1.14] font-light tracking-[-0.03em]">
+              Depois do diagnóstico, você decide.
+            </h3>
+            <p className="max-w-[640px] text-[17px] leading-[1.6] text-muted">
+              Se fizer sentido trabalhar junto, a Krivo cuida do seu Instagram, do seu perfil no Google e
+              do seu site, sem depender de você no dia a dia. Identidade visual e anúncios, quando fizer
+              sentido. Se não fizer, você fica com o diagnóstico do mesmo jeito.
+            </p>
+            <DiagnosticoCta position="meio" tone="dark" className="self-start" />
+          </div>
+        </div>
       </div>
     </section>
   );
