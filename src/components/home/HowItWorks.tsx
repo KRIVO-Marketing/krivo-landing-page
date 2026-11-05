@@ -48,11 +48,11 @@ export function HowItWorks() {
           </p>
         </div>
 
-        <ul className="m-0 flex list-none flex-wrap gap-3 p-0">
+        <ul className="m-0 grid list-none gap-3 p-0 min-[700px]:grid-cols-3">
           {pillars.map((item) => (
             <li
               key={item.title}
-              className="box-border flex flex-[1_1_240px] flex-col gap-6 rounded-[20px] border border-line-soft bg-white p-7"
+              className="box-border flex flex-col gap-6 rounded-[20px] border border-line-soft bg-white p-7"
             >
               <PillarIcon pillar={item.pillar} />
               <div className="flex flex-col gap-2.5">
@@ -67,11 +67,11 @@ export function HowItWorks() {
           <h3 className="font-display text-[clamp(24px,2.6vw,36px)] leading-[1.15] font-light tracking-[-0.03em]">
             Como funciona
           </h3>
-          <ol className="m-0 flex list-none flex-wrap gap-3 p-0">
+          <ol className="m-0 grid list-none gap-3 p-0 min-[700px]:grid-cols-3">
             {steps.map((step, index) => (
               <li
                 key={step.title}
-                className="box-border flex flex-[1_1_240px] flex-col gap-8 rounded-[20px] border border-line-soft bg-white p-7"
+                className="box-border flex flex-col gap-8 rounded-[20px] border border-line-soft bg-white p-7"
               >
                 <span className="text-[14px] text-muted">{String(index + 1).padStart(2, "0")}</span>
                 <div className="flex flex-col gap-2.5">

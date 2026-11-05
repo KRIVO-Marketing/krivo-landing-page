@@ -12,7 +12,7 @@ const contacts = [
 export function Footer() {
   return (
     <footer id="contato" className="p-3">
-      <div data-lazy-bg="close" className="box-border flex flex-col gap-[clamp(56px,8vw,128px)] rounded-[28px] bg-navy-deep bg-cover bg-center bg-no-repeat px-[clamp(20px,5vw,72px)] pt-[clamp(28px,5vw,72px)] pb-[clamp(20px,2.6vw,36px)] text-white mobile:bg-bottom-left">
+      <div data-lazy-bg="close" className="box-border flex flex-col gap-[clamp(56px,8vw,128px)] rounded-[28px] bg-navy-deep bg-cover bg-center bg-no-repeat px-[clamp(20px,5vw,72px)] pt-[clamp(28px,5vw,72px)] pb-[clamp(20px,2.6vw,36px)] text-white max-[1023px]:bg-[length:auto_700px] max-[1023px]:bg-top-left max-[1023px]:bg-repeat-y">
         <div className="flex flex-wrap items-start justify-between gap-12">
           <div id="cta-final" className="flex min-w-0 flex-[2_1_420px] flex-col gap-8">
             <h2 className="max-w-[11em] font-display text-[clamp(34px,5.2vw,80px)] leading-[1.04] font-normal tracking-[-0.04em]">

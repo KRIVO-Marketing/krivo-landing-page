@@ -35,8 +35,8 @@ export function Hero() {
         {/* Véu suave no topo: acalma o granulado atrás do menu */}
         <span aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-40 bg-[linear-gradient(180deg,rgba(26,44,85,0.75),rgba(26,44,85,0))]" />
         <div className="box-border flex min-h-[clamp(640px,56vw,840px)] flex-col justify-between gap-18 p-[clamp(20px,2.6vw,36px)] text-white">
-        <nav aria-label="Principal" className="flex items-center justify-between gap-6">
-          <a href="#topo" aria-label="KRIVO, início" className="flex min-h-11 items-center">
+        <nav aria-label="Principal" className="flex items-center justify-between gap-3 min-[460px]:gap-6">
+          <a href="#topo" aria-label="KRIVO, início" className="flex min-h-11 shrink-0 items-center">
             <Image
               src="/assets/krivo-logo.svg"
               alt="KRIVO"
@@ -47,7 +47,7 @@ export function Hero() {
               className="block h-[26px] w-auto"
             />
           </a>
-          <div className="flex items-center gap-2 text-[15px] font-medium text-shadow-halo mobile:hidden">
+          <div className="hidden items-center gap-2 text-[15px] font-medium whitespace-nowrap text-shadow-halo min-[1024px]:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -61,7 +61,7 @@ export function Hero() {
           <WhatsAppLink
             position="menu"
             message={DIAGNOSTICO_TEXT}
-            className="inline-flex h-11 items-center rounded-full bg-white px-[22px] text-[15px] font-medium whitespace-nowrap text-navy transition-[translate,background-color] duration-250 ease-[ease] hover:-translate-y-0.5"
+            className="inline-flex h-11 shrink-0 items-center rounded-full bg-white px-4 text-[14px] font-medium whitespace-nowrap text-navy min-[380px]:px-[22px] min-[380px]:text-[15px] transition-[translate,background-color] duration-250 ease-[ease] hover:-translate-y-0.5"
           >
             Quero meu diagnóstico
           </WhatsAppLink>
@@ -83,10 +83,16 @@ export function Hero() {
             {/* Prova perto da oferta: o case real logo abaixo do botão */}
             <a
               href="#resultados"
-              className="inline-flex min-h-11 items-center gap-2 self-start text-[15px] font-medium text-white text-shadow-halo underline decoration-white/40 underline-offset-4 hover:text-white hover:decoration-white"
+              className="self-start py-2.5 text-[15px] leading-snug font-medium text-white text-shadow-halo underline decoration-white/40 underline-offset-4 hover:text-white hover:decoration-white"
             >
-              Caso real: Barbearia Quintana, do 5º ao 2º no Google em uma semana
-              <ArrowIcon size={14} strokeWidth={1.6} />
+              {/* Seta em linha com o texto: quando a frase quebra, ela acompanha a última palavra */}
+              Caso real: Barbearia Quintana, do 5º ao 2º no Google em uma{" "}
+              <span className="whitespace-nowrap">
+                semana{" "}
+                <span className="inline-block align-[-2px]">
+                  <ArrowIcon size={14} strokeWidth={1.6} />
+                </span>
+              </span>
             </a>
             <PartnersLine />
           </div>
