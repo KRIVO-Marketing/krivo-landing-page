@@ -70,6 +70,6 @@ const bgRule = (key, name) => {
 `;
 };
 await writeFile(
-  "src/app/backgrounds.generated.css",
+  "src/styles/backgrounds.generated.css",
   `/* Gerado por scripts/optimize-images.mjs — não editar à mão. */\n${bgRule("close", "bg-close")}${bgRule("light", "bg-light")}`,
 );

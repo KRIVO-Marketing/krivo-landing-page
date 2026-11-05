@@ -1,9 +1,8 @@
 import { clients } from "@/lib/clients";
+import { SITE_URL } from "@/lib/site";
 import { WHATSAPP_DISPLAY } from "@/lib/whatsapp";
 
 export const dynamic = "force-static";
-
-const SITE_URL = "https://www.krivomkt.com.br";
 
 /** Resumo da KRIVO em Markdown para assistentes de IA (padrão llmstxt.org). Os cases vêm de src/lib/clients.ts. */
 export function GET() {

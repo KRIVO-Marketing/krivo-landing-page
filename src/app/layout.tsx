@@ -1,55 +1,9 @@
-import type { Metadata } from "next";
-import Script from "next/script";
 import { preload } from "react-dom";
-import { SOURCE_PREFIX } from "@/lib/analytics";
-import { largest } from "@/lib/images";
-import "./globals.css";
+import { GoogleTag } from "@/components/shared/GoogleTag";
+import { organizationJsonLd, siteMetadata } from "@/lib/seo";
+import "@/styles/globals.css";
 
-const GA_ID = "G-86HVDHE5M5";
-
-const SITE_URL = "https://www.krivomkt.com.br";
-const DESCRIPTION =
-  "KRIVO é uma agência de marketing em Campinas e região (SP) que transforma negócios em marcas com autoridade, identidade e posicionamento, com estratégia, criatividade e tecnologia.";
-
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: "KRIVO | Agência de Marketing em Campinas",
-  keywords: ["KRIVO", "KRIVO Campinas", "agência de marketing Campinas", "marketing digital Campinas", "branding Campinas", "posicionamento de marca"],
-  description: DESCRIPTION,
-  alternates: { canonical: "/" },
-  openGraph: {
-    type: "website",
-    locale: "pt_BR",
-    url: SITE_URL,
-    siteName: "KRIVO",
-    title: "KRIVO | Ser visto, reconhecido e lembrado",
-    description: DESCRIPTION,
-    images: [{ url: largest("bg-hero", "webp"), alt: "KRIVO" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "KRIVO | Ser visto, reconhecido e lembrado",
-    description: DESCRIPTION,
-    images: [largest("bg-hero", "webp")],
-  },
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": ["Organization", "ProfessionalService"],
-  "@id": `${SITE_URL}/#organization`,
-  name: "KRIVO",
-  alternateName: ["KRIVO Marketing", "KRIVO Campinas"],
-  url: SITE_URL,
-  telephone: "+55-19-99679-2750",
-  address: { "@type": "PostalAddress", addressLocality: "Campinas", addressRegion: "SP", addressCountry: "BR" },
-  areaServed: [{ "@type": "City", name: "Campinas" }, { "@type": "AdministrativeArea", name: "Região Metropolitana de Campinas" }, { "@type": "Country", name: "Brasil" }],
-  knowsAbout: ["Marketing digital", "Branding", "Posicionamento de marca", "Gestão de redes sociais", "Criação de sites"],
-  logo: `${SITE_URL}/assets/krivo-logo.svg`,
-  description: DESCRIPTION,
-  email: "krivomarketing@gmail.com",
-  sameAs: ["https://www.instagram.com/krivo.mkt/"],
-};
+export const metadata = siteMetadata;
 
 export default function RootLayout({
   children,
@@ -62,26 +16,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
       </head>
       <body>
-        {/* Google tag (gtag.js). afterInteractive, não lazyOnload: quem chega pelo navegador do
-            Instagram e sai rápido (ou clica no WhatsApp logo) precisa contar como sessão.
-            A propriedade de usuário `origem` repete o código de getRef (ig-murilo etc.): o Tempo real
-            do GA4 só mostra dimensões de usuário, não os parâmetros do evento. Sem UTM, não sobrescreve. */}
-        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
-        <Script id="google-tag" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-(function () {
-  var p = new URLSearchParams(location.search);
-  var prefix = ${JSON.stringify(SOURCE_PREFIX)}[(p.get('utm_source') || '').toLowerCase()];
-  var content = (p.get('utm_content') || '').toLowerCase().replace(/[^a-z0-9-]/g, '');
-  if (prefix && content) gtag('set', 'user_properties', { origem: prefix + '-' + content });
-})();
-gtag('config', '${GA_ID}');`}
-        </Script>
+        <GoogleTag />
         {children}
       </body>
     </html>
