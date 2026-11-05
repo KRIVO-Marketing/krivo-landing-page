@@ -22,6 +22,6 @@ npm run lint
   - `shared/` — peças usadas por mais de uma página (`GoogleTag`, `WhatsAppLink`, `DiagnosticoCta`, `Team`, `ArrowIcon`, `Texture`…)
 - `src/lib/` — dados e configuração: `site.ts` (URL e descrição do site), `seo.ts` (metadados e schema.org), `clients.ts` (cases), `analytics.ts` (GA4), `whatsapp.ts`, `images.ts` + `image-manifest.json` (gerado)
 - `src/styles/` — `globals.css` (Tailwind, fontes e tokens do design) e `backgrounds.generated.css` (gerado pelo script de imagens)
-- `assets-src/` — imagens-fonte (WebP) do script de otimização; `assets-src/originais/` guarda as fotos originais dos sócios (não entram no build)
+- `assets-src/` — imagens-fonte (WebP) do script de otimização
 - `scripts/optimize-images.mjs` — gera AVIF/WebP responsivos em `public/assets/`, além de `src/lib/image-manifest.json` e `src/styles/backgrounds.generated.css` (`node scripts/optimize-images.mjs`)
 - `public/` — `assets/` (imagens geradas e logo), `clients/` (logos e mídia dos cases), `fonts/`, `_redirects` (links curtos com UTM), `_headers`
