@@ -38,20 +38,6 @@
     "height": 1400,
     "variants": [
       {
-        "w": 1280,
-        "avif": "/assets/bg-close-1280.f2239f02.avif",
-        "avifBytes": 280240,
-        "webp": "/assets/bg-close-1280.be54f3a2.webp",
-        "webpBytes": 380536
-      },
-      {
-        "w": 1920,
-        "avif": "/assets/bg-close-1920.fd6c8989.avif",
-        "avifBytes": 586322,
-        "webp": "/assets/bg-close-1920.38fa9672.webp",
-        "webpBytes": 795462
-      },
-      {
         "w": 2400,
         "avif": "/assets/bg-close-2400.d9b6e093.avif",
         "avifBytes": 1125101,
@@ -64,20 +50,6 @@
     "width": 2200,
     "height": 1300,
     "variants": [
-      {
-        "w": 1280,
-        "avif": "/assets/bg-light-1280.417ab22c.avif",
-        "avifBytes": 255904,
-        "webp": "/assets/bg-light-1280.13faac34.webp",
-        "webpBytes": 358194
-      },
-      {
-        "w": 1920,
-        "avif": "/assets/bg-light-1920.1d4bbe8e.avif",
-        "avifBytes": 538274,
-        "webp": "/assets/bg-light-1920.e08ba21c.webp",
-        "webpBytes": 753208
-      },
       {
         "w": 2200,
         "avif": "/assets/bg-light-2200.30d3b39d.avif",
