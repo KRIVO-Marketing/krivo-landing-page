@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CTA_NOTE, DiagnosticoCta } from "./DiagnosticoCta";
+import { CTA_NOTE, DiagnosticoCta } from "@/components/shared/DiagnosticoCta";
 
 export function FinalCta() {
   return (

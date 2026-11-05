@@ -1,24 +1,27 @@
-# KRIVO — Home
+# KRIVO — Site
 
-Landing page da KRIVO em Next.js (App Router) + Tailwind CSS v4, refatorada a partir do
-mockup em `design-reference/` com fidelidade visual 1:1.
+Site da KRIVO em Next.js (App Router, export estático) + Tailwind CSS v4, hospedado na Cloudflare Workers.
 
 ## Rodando
 
 ```bash
 npm install
 npm run dev     # http://localhost:3000
-npm run build   # build de produção
+npm run build   # build de produção (gera out/)
 npm run lint
 ```
 
 ## Estrutura
 
-- `src/app/layout.tsx` — HTML raiz, metadados e fontes (Albert Sans + Lexend)
-- `src/app/globals.css` — Tailwind e tokens do design (`@theme`: cores, fontes, sombra de texto, marquee)
-- `src/app/page.tsx` — composição da página
-- `src/components/` — uma seção por arquivo (`Hero`, `About`, `Team`, `Services`, `Method`, `Channels`, `Footer`) e peças compartilhadas (`CtaLink`, `ArrowIcon`)
-- `assets-src/` — imagens-fonte (WebP); `assets-src/originais/` guarda as fotos originais dos sócios (não entram no build)
-- `scripts/optimize-images.mjs` — gera AVIF/WebP responsivos em `public/assets/` e `src/lib/image-manifest.json` (`node scripts/optimize-images.mjs`)
-- `public/assets/` — imagens otimizadas (geradas) e logo; `public/fonts/` — fontes locais
-- `design-reference/` — export original do design (não faz parte do build).
+- `src/app/` — só o que o Next exige na raiz: `layout.tsx` (HTML raiz), ícones (`favicon.ico`, `icon.svg`, `apple-icon.png`), `robots.ts`, `sitemap.ts` e `llms.txt/`
+  - `(site)/` — as páginas: `page.tsx` (home), `diagnostico/`, `clientes/[slug]/` (case por cliente). O nome entre parênteses não entra na URL
+- `src/components/` — um componente por arquivo, separados pela página que os usa:
+  - `home/` — seções da home (`Hero`, `About`, `Services`, `Method`, `Channels`, `Clients`, `Footer`…)
+  - `diagnostico/` — seções da página /diagnostico
+  - `clientes/` — seções da página de case (`CaseIntro`, `CaseProof`, `CaseChannels`…) e `styles.ts` com as classes repetidas
+  - `shared/` — peças usadas por mais de uma página (`GoogleTag`, `WhatsAppLink`, `DiagnosticoCta`, `Team`, `ArrowIcon`, `Texture`…)
+- `src/lib/` — dados e configuração: `site.ts` (URL e descrição do site), `seo.ts` (metadados e schema.org), `clients.ts` (cases), `analytics.ts` (GA4), `whatsapp.ts`, `images.ts` + `image-manifest.json` (gerado)
+- `src/styles/` — `globals.css` (Tailwind, fontes e tokens do design) e `backgrounds.generated.css` (gerado pelo script de imagens)
+- `assets-src/` — imagens-fonte (WebP) do script de otimização
+- `scripts/optimize-images.mjs` — gera AVIF/WebP responsivos em `public/assets/`, além de `src/lib/image-manifest.json` e `src/styles/backgrounds.generated.css` (`node scripts/optimize-images.mjs`)
+- `public/` — `assets/` (imagens geradas e logo), `clients/` (logos e mídia dos cases), `fonts/`, `_redirects` (links curtos com UTM), `_headers`

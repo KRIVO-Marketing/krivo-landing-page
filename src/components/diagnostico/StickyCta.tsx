@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { DiagnosticoCta } from "./DiagnosticoCta";
+import { DiagnosticoCta } from "@/components/shared/DiagnosticoCta";
 
 /** Botão fixo no rodapé da tela (só celular). Some enquanto o botão do topo ou o final estão visíveis. */
 export function StickyCta() {

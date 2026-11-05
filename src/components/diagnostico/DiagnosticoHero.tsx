@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { CTA_NOTE, DiagnosticoCta } from "./DiagnosticoCta";
-import { PartnersLine } from "./PartnersLine";
+import { CTA_NOTE, DiagnosticoCta } from "@/components/shared/DiagnosticoCta";
+import { PartnersLine } from "@/components/shared/PartnersLine";
 
 export function DiagnosticoHero() {
   return (
