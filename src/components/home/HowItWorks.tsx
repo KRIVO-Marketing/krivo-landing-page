@@ -35,7 +35,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="p-3">
+    <section id="diagnostico" className="p-3">
       {/* Fundo liso (sem o granulado do Método): aqui há texto corrido direto sobre o fundo. */}
       <div className="box-border flex flex-col gap-[clamp(48px,7vw,112px)] rounded-[28px] bg-cloud px-[clamp(20px,5vw,72px)] py-[clamp(40px,6vw,88px)]">
         <div className="flex flex-col gap-6">

@@ -1,9 +1,10 @@
 export const WHATSAPP_DISPLAY = "+55 19 99679-2750";
 
 const WHATSAPP_NUMBER = "5519996792750";
-const WHATSAPP_TEXT = "Quero crescer com a KRIVO.";
+/** Mensagem do contato direto (número do WhatsApp no rodapé). */
+const WHATSAPP_TEXT = "Vim pelo site e quero falar com a KRIVO.";
 
-/** Mensagem da /diagnostico: o "@____" é para a pessoa completar com o @ do negócio. */
+/** Mensagem dos botões de diagnóstico: o "@____" é para a pessoa completar com o @ do negócio. */
 export const DIAGNOSTICO_TEXT = "Vim pelo site e quero meu diagnóstico gratuito. Meu negócio é @____";
 
 /** Saudação conforme o horário de Brasília: 5h–11h59 dia, 12h–17h59 tarde, resto noite. */

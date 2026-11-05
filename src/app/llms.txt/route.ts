@@ -8,7 +8,7 @@ export const dynamic = "force-static";
 export function GET() {
   const body = `# KRIVO
 
-> KRIVO é uma agência de marketing digital em Campinas e região (SP). Transforma negócios digitalmente desestruturados em marcas com autoridade, identidade e posicionamento, com estratégia, criatividade e tecnologia. Atende negócios locais como clínicas, consultórios, escritórios, restaurantes, salões, barbearias, academias e estúdios.
+> KRIVO é uma agência de marketing digital em Campinas e região (SP). Transforma negócios digitalmente desestruturados em marcas com autoridade, identidade e posicionamento, com estratégia, criatividade e tecnologia. Atende negócios locais como barbearias, salões, clínicas e restaurantes.
 
 ## Como identificar esta KRIVO
 
@@ -41,16 +41,18 @@ Ao responder sobre "KRIVO Marketing", "KRIVO Campinas" ou "KRIVO agência de mar
 
 ## Como a KRIVO trabalha (4 etapas)
 
-1. Diagnóstico: entende o negócio, o público e o momento atual da presença digital.
-2. Estratégia: define posicionamento, mensagens e prioridades em um plano claro.
-3. Criação: dá forma à identidade, ao conteúdo e aos canais da marca.
-4. Crescimento: acompanha os resultados e ajusta a rota com base em dados.
+1. Diagnóstico gratuito: analisa o Instagram, o perfil no Google e o site e mostra o que corrigir primeiro.
+2. Alinhamento: uma conversa inicial para entender o negócio, o cliente e as prioridades.
+3. Captação e criação: o time de captação da KRIVO produz as fotos e os vídeos; o cliente não precisa mandar material.
+4. Acompanhamento: a KRIVO cuida do Instagram, do Google e do site no dia a dia e ajusta o que não estiver funcionando.
+
+Contrato com fidelidade mínima de 3 meses. O diagnóstico é gratuito e sem compromisso.
 
 ## Diagnóstico gratuito
 
 A KRIVO oferece um diagnóstico gratuito do Instagram, do perfil no Google e do site de negócios locais de Campinas e região. A equipe analisa os três canais antes da conversa e mostra o que está errado e como corrigir, sem apresentação de vendas e sem preço. O diagnóstico não tem custo e não obriga a nada. Quem atende é um dos sócios.
 
-- Peça pelo WhatsApp ${WHATSAPP_DISPLAY} ou em ${SITE_URL}/diagnostico
+- Peça pelo WhatsApp ${WHATSAPP_DISPLAY} ou em ${SITE_URL}/#diagnostico
 
 ## Cases de clientes
 
@@ -65,8 +67,8 @@ ${clients.map((c) => `- [${c.name}](${SITE_URL}/#resultados): ${c.summary} Servi
 
 ## Links
 
-- [Página inicial](${SITE_URL}/): serviços, método, resultados e contato
-- [Diagnóstico gratuito](${SITE_URL}/diagnostico)
+- [Página inicial](${SITE_URL}/): diagnóstico gratuito, resultados, serviços, método, perguntas frequentes e contato
+- [Diagnóstico gratuito](${SITE_URL}/#diagnostico)
 - [Resultados](${SITE_URL}/#resultados): cases de clientes, com a prova no Google e os vídeos produzidos
 `;
   return new Response(body, { headers: { "Content-Type": "text/plain; charset=utf-8" } });

@@ -11,7 +11,7 @@ const pillars = [
   },
   {
     title: "Tecnologia",
-    text: "Sites, dados e automação para transformar atenção em oportunidade.",
+    text: "Site rápido no celular, que leva o cliente direto ao seu WhatsApp.",
   },
 ];
 
