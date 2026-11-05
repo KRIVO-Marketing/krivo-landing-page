@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { useReducedMotion, useScroll, useTransform } from "motion/react";
-import { ScrollText } from "./ScrollText";
+import { ScrollText } from "@/components/home/ScrollText";
 
 // Mesmos valores dos tokens de globals.css (cloud, mist, muted, navy).
 const CLOUD = "#f1f3fb";

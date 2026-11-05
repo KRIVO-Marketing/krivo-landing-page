@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useSpring } from "motion/react";
-import { ServiceStep } from "./ServiceStep";
+import { ServiceStep } from "@/components/home/ServiceStep";
 
 type ServiceListProps = {
   services: { title: string; text: string }[];

@@ -6,8 +6,8 @@ import { HowItWorks } from "@/components/diagnostico/HowItWorks";
 import { NextStep } from "@/components/diagnostico/NextStep";
 import { Problem } from "@/components/diagnostico/Problem";
 import { StickyCta } from "@/components/diagnostico/StickyCta";
-import { LazyBackgrounds } from "@/components/LazyBackgrounds";
-import { Team } from "@/components/Team";
+import { LazyBackgrounds } from "@/components/shared/LazyBackgrounds";
+import { Team } from "@/components/shared/Team";
 import { largest } from "@/lib/images";
 
 const TITLE = "Diagnóstico gratuito | KRIVO, Campinas";

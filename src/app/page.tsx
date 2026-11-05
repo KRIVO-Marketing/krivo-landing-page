@@ -1,14 +1,14 @@
 import { preload } from "react-dom";
-import { About } from "@/components/About";
-import { Channels } from "@/components/Channels";
-import { Clients } from "@/components/Clients";
-import { Footer } from "@/components/Footer";
-import { GradualBlur } from "@/components/GradualBlur";
-import { Hero } from "@/components/Hero";
-import { LazyBackgrounds } from "@/components/LazyBackgrounds";
-import { Method } from "@/components/Method";
-import { Services } from "@/components/Services";
-import { Team } from "@/components/Team";
+import { About } from "@/components/home/About";
+import { Channels } from "@/components/home/Channels";
+import { Clients } from "@/components/home/Clients";
+import { Footer } from "@/components/home/Footer";
+import { GradualBlur } from "@/components/home/GradualBlur";
+import { Hero } from "@/components/home/Hero";
+import { Method } from "@/components/home/Method";
+import { Services } from "@/components/home/Services";
+import { LazyBackgrounds } from "@/components/shared/LazyBackgrounds";
+import { Team } from "@/components/shared/Team";
 import { HERO_SIZES, largest, srcSet } from "@/lib/images";
 
 export default function Home() {

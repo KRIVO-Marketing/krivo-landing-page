@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { HERO_SIZES, dimensions, largest, srcSet } from "@/lib/images";
-import { CtaLink } from "./CtaLink";
-import { PartnersLine } from "./diagnostico/PartnersLine";
-import { WhatsAppLink } from "./WhatsAppLink";
+import { CtaLink } from "@/components/home/CtaLink";
+import { PartnersLine } from "@/components/shared/PartnersLine";
+import { WhatsAppLink } from "@/components/shared/WhatsAppLink";
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },

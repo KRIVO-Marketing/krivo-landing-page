@@ -1,4 +1,4 @@
-import { ServiceList } from "./ServiceList";
+import { ServiceList } from "@/components/home/ServiceList";
 
 const services = [
   {

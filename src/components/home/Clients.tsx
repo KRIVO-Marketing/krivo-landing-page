@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { clients, initials, type Client } from "@/lib/clients";
-import { ArrowIcon } from "./ArrowIcon";
+import { ArrowIcon } from "@/components/shared/ArrowIcon";
 
 function ClientCard({ client, wide }: { client: Client; wide: boolean }) {
   return (

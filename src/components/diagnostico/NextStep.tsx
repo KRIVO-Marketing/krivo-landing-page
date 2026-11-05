@@ -1,4 +1,4 @@
-import { DiagnosticoCta } from "./DiagnosticoCta";
+import { DiagnosticoCta } from "@/components/shared/DiagnosticoCta";
 
 export function NextStep() {
   return (

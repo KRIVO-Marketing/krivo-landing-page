@@ -1,6 +1,6 @@
 import type { CtaPosition } from "@/lib/analytics";
-import { ArrowIcon } from "./ArrowIcon";
-import { WhatsAppLink } from "./WhatsAppLink";
+import { ArrowIcon } from "@/components/shared/ArrowIcon";
+import { WhatsAppLink } from "@/components/shared/WhatsAppLink";
 
 export function CtaLink({ position }: { position: CtaPosition }) {
   return (

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { WHATSAPP_DISPLAY } from "@/lib/whatsapp";
-import { CtaLink } from "./CtaLink";
-import { WhatsAppLink } from "./WhatsAppLink";
+import { CtaLink } from "@/components/home/CtaLink";
+import { WhatsAppLink } from "@/components/shared/WhatsAppLink";
 
 const contacts = [
   { label: "WhatsApp", value: WHATSAPP_DISPLAY, whatsapp: true },

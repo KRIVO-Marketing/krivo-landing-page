@@ -1,4 +1,4 @@
-import { type Pillar, PillarIcon } from "./PillarIcon";
+import { type Pillar, PillarIcon } from "@/components/shared/PillarIcon";
 
 const channels: { title: string; text: string; pillar: Pillar }[] = [
   {
