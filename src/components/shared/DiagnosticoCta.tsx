@@ -24,9 +24,10 @@ export function DiagnosticoCta({ position, tone = "light", className = "" }: Dia
     <WhatsAppLink
       position={position}
       message={DIAGNOSTICO_TEXT}
-      className={`inline-flex h-[56px] items-center justify-between gap-2.5 rounded-full pr-2 pl-5 text-[13px] font-medium whitespace-nowrap min-[380px]:text-[14px] min-[460px]:gap-3.5 min-[460px]:pl-[26px] min-[460px]:text-[16px] transition-[translate] duration-250 ease-[ease] hover:-translate-y-0.5 mobile:w-full ${colors} ${className}`}
+      className={`inline-flex min-h-[56px] max-w-full items-center justify-between gap-2.5 rounded-full py-2 pr-2 pl-5 text-[13px] leading-tight font-medium min-[380px]:text-[14px] min-[460px]:whitespace-nowrap min-[460px]:gap-3.5 min-[460px]:pl-[26px] min-[460px]:text-[16px] transition-[translate] duration-250 ease-[ease] hover:-translate-y-0.5 mobile:w-full ${colors} ${className}`}
     >
-      {CTA_LABEL}
+      {/* Sem nowrap no celular: em cartão estreito o texto quebra em duas linhas, e a bolinha da seta não sai do botão */}
+      <span className="min-w-0 text-left">{CTA_LABEL}</span>
       <span className={`inline-flex size-[40px] shrink-0 items-center justify-center rounded-full ${iconColors}`}>
         <ArrowIcon size={18} strokeWidth={1.6} />
       </span>

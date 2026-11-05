@@ -10,9 +10,9 @@ export function Problem() {
       <h2 className="max-w-[14em] pb-[clamp(40px,5vw,72px)] font-display text-[clamp(30px,4.4vw,64px)] leading-[1.08] font-light tracking-[-0.035em]">
         Talvez você já tenha passado por isso.
       </h2>
-      <ul className="m-0 flex list-none flex-wrap gap-x-10 gap-y-8 p-0">
+      <ul className="m-0 grid list-none gap-x-10 gap-y-8 p-0 min-[700px]:grid-cols-3">
         {symptoms.map((symptom, index) => (
-          <li key={symptom} className="flex flex-[1_1_260px] flex-col gap-4 border-t border-line pt-6">
+          <li key={symptom} className="flex flex-col gap-4 border-t border-line pt-6">
             <span className="text-[14px] text-muted">{String(index + 1).padStart(2, "0")}</span>
             <p className="font-display text-[clamp(20px,1.8vw,24px)] leading-[1.3] font-normal tracking-[-0.02em]">
               {symptom}
