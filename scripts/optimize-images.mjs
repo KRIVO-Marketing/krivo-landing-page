@@ -11,8 +11,8 @@ const WEBP_QUALITY = 80;
 
 const jobs = {
   "bg-hero": [960, 1440, 1920, 2400],
-  "bg-close": [1280, 1920, 2400],
-  "bg-light": [1280, 1920, 2200],
+  "bg-close": [2400],
+  "bg-light": [2200],
   sobre: [480, 880, 1410],
   "socio-1": [450, 900],
   "socio-2": [450, 900],
@@ -47,25 +47,14 @@ for (const [name, widths] of Object.entries(jobs)) {
 await mkdir("src/lib", { recursive: true });
 await writeFile("src/lib/image-manifest.json", JSON.stringify(manifest, null, 2) + "\n");
 
-// CSS dos fundos abaixo da dobra (carregados via LazyBackgrounds): AVIF com fallback WebP, 1280 no mobile 1x, 1920 no mobile em tela 2x+ (mesma nitidez do hero).
+// CSS dos fundos abaixo da dobra (carregados via LazyBackgrounds): AVIF com fallback WebP, sempre na resolução original.
+// Sem versão menor no celular: lá as seções são altas e o fundo é esticado (cover), então só a imagem inteira mantém o granulado nítido como no hero.
 const bgRule = (key, name) => {
-  const [small, mid, large] = manifest[name].variants;
+  const large = manifest[name].variants.at(-1);
   const set = (v) => `image-set(url(${v.avif}) type("image/avif"), url(${v.webp}) type("image/webp"))`;
   return `[data-lazy-bg="${key}"].bg-loaded {
   background-image: url(${large.webp});
   background-image: ${set(large)};
-}
-@media (max-width: 760px) {
-  [data-lazy-bg="${key}"].bg-loaded {
-    background-image: url(${small.webp});
-    background-image: ${set(small)};
-  }
-}
-@media (max-width: 760px) and (min-resolution: 2dppx) {
-  [data-lazy-bg="${key}"].bg-loaded {
-    background-image: url(${mid.webp});
-    background-image: ${set(mid)};
-  }
 }
 `;
 };
