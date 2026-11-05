@@ -54,7 +54,7 @@ A KRIVO oferece um diagnóstico gratuito do Instagram, do perfil no Google e do 
 
 ## Cases de clientes
 
-${clients.map((c) => `- [${c.name}](${SITE_URL}/clientes/${c.slug}): ${c.summary} Serviços: ${c.services.join(", ")}. Resultado: ${c.highlight.value}, ${c.highlight.label}.`).join("\n")}
+${clients.map((c) => `- [${c.name}](${SITE_URL}/#resultados): ${c.summary} Serviços: ${c.services.join(", ")}. Resultado: ${c.highlight.value}, ${c.highlight.label}.`).join("\n")}
 
 ## Contato
 
@@ -65,9 +65,9 @@ ${clients.map((c) => `- [${c.name}](${SITE_URL}/clientes/${c.slug}): ${c.summary
 
 ## Links
 
-- [Página inicial](${SITE_URL}/): serviços, método, clientes e contato
+- [Página inicial](${SITE_URL}/): serviços, método, resultados e contato
 - [Diagnóstico gratuito](${SITE_URL}/diagnostico)
-${clients.map((c) => `- [Case ${c.name}](${SITE_URL}/clientes/${c.slug})`).join("\n")}
+- [Resultados](${SITE_URL}/#resultados): cases de clientes, com a prova no Google e os vídeos produzidos
 `;
   return new Response(body, { headers: { "Content-Type": "text/plain; charset=utf-8" } });
 }

@@ -1,11 +1,11 @@
 import { preload } from "react-dom";
 import { About } from "@/components/home/About";
 import { Channels } from "@/components/home/Channels";
-import { Clients } from "@/components/home/Clients";
 import { Footer } from "@/components/home/Footer";
 import { GradualBlur } from "@/components/home/GradualBlur";
 import { Hero } from "@/components/home/Hero";
 import { Method } from "@/components/home/Method";
+import { Results } from "@/components/home/Results";
 import { Services } from "@/components/home/Services";
 import { LazyBackgrounds } from "@/components/shared/LazyBackgrounds";
 import { Team } from "@/components/shared/Team";
@@ -27,7 +27,7 @@ export default function Home() {
         <Team />
         <Services />
         <Method />
-        <Clients />
+        <Results />
         <Channels />
       </main>
       <Footer />
