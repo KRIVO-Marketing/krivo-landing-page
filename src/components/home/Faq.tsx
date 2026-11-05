@@ -1,4 +1,4 @@
-// Perguntas sobre fidelidade e sobre gravar vídeo ficam de fora até os sócios definirem a política.
+// Respostas só com o que a Krivo cumpre hoje. Relatório mensal fica de fora até o formato ser definido.
 const questions = [
   {
     q: "É grátis mesmo?",
@@ -14,7 +14,15 @@ const questions = [
   },
   {
     q: "Já me frustrei com agência. O que muda?",
-    a: "Por isso a gente começa pelo diagnóstico: você vê o que enxergamos no seu negócio antes de pagar qualquer coisa e decide com calma.",
+    a: "Por isso a gente começa pelo diagnóstico: você vê o que enxergamos no seu negócio antes de pagar qualquer coisa e decide com calma. E quem te atende no diagnóstico é quem faz o seu trabalho.",
+  },
+  {
+    q: "Vou ter que gravar vídeo ou mandar material?",
+    a: "Não. Nosso time de captação produz as fotos e os vídeos. Você só participa de uma conversa de alinhamento no começo.",
+  },
+  {
+    q: "Tem fidelidade?",
+    a: "O contrato tem fidelidade mínima de 3 meses. O diagnóstico não: ele é gratuito e não te obriga a nada.",
   },
   {
     q: "Vocês garantem resultado?",
@@ -22,13 +30,13 @@ const questions = [
   },
   {
     q: "Vocês atendem o meu segmento?",
-    a: "Atendemos negócios locais de Campinas e região, como clínicas, consultórios, escritórios, restaurantes, salões, barbearias, academias e estúdios. No diagnóstico a gente diz com sinceridade se faz sentido para o seu caso.",
+    a: "Atendemos negócios locais de Campinas e região, como barbearias, salões, clínicas e restaurantes. No diagnóstico a gente diz com sinceridade se faz sentido para o seu caso.",
   },
 ];
 
 export function Faq() {
   return (
-    <section className="mx-auto box-border max-w-[1320px] px-[clamp(20px,4vw,48px)] py-[clamp(72px,10vw,160px)]">
+    <section id="perguntas" className="mx-auto box-border max-w-[1320px] px-[clamp(20px,4vw,48px)] py-[clamp(72px,10vw,160px)]">
       <div className="flex flex-wrap items-start gap-x-[clamp(32px,6vw,96px)] gap-y-10">
         <h2 className="flex-[1_1_280px] font-display text-[clamp(30px,4.4vw,64px)] leading-[1.08] font-light tracking-[-0.035em]">
           Perguntas frequentes

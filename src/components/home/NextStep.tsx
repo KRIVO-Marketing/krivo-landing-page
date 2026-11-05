@@ -2,7 +2,7 @@ import { DiagnosticoCta } from "@/components/shared/DiagnosticoCta";
 
 export function NextStep() {
   return (
-    <section className="mx-auto box-border max-w-[1320px] px-[clamp(20px,4vw,48px)] pb-[clamp(72px,10vw,160px)]">
+    <section className="mx-auto box-border max-w-[1320px] px-[clamp(20px,4vw,48px)] py-[clamp(72px,10vw,160px)]">
       <div className="flex flex-col gap-8 border-t border-line pt-[clamp(40px,5vw,72px)]">
         <h2 className="max-w-[16em] font-display text-[clamp(28px,3.5vw,52px)] leading-[1.14] font-light tracking-[-0.03em]">
           Depois do diagnóstico, você decide.

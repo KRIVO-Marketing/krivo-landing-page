@@ -1,14 +1,16 @@
 import Image from "next/image";
 import { HERO_SIZES, dimensions, largest, srcSet } from "@/lib/images";
-import { CtaLink } from "@/components/home/CtaLink";
+import { DIAGNOSTICO_TEXT } from "@/lib/whatsapp";
+import { ArrowIcon } from "@/components/shared/ArrowIcon";
+import { CTA_NOTE, DiagnosticoCta } from "@/components/shared/DiagnosticoCta";
 import { PartnersLine } from "@/components/shared/PartnersLine";
 import { WhatsAppLink } from "@/components/shared/WhatsAppLink";
 
 const navLinks = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#servicos", label: "Serviços" },
-  { href: "#metodo", label: "Método" },
   { href: "#resultados", label: "Resultados" },
+  { href: "#diagnostico", label: "Diagnóstico" },
+  { href: "#servicos", label: "Serviços" },
+  { href: "#perguntas", label: "Perguntas" },
 ];
 
 export function Hero() {
@@ -58,30 +60,34 @@ export function Hero() {
           </div>
           <WhatsAppLink
             position="menu"
+            message={DIAGNOSTICO_TEXT}
             className="inline-flex h-11 items-center rounded-full bg-white px-[22px] text-[15px] font-medium whitespace-nowrap text-navy transition-[translate,background-color] duration-250 ease-[ease] hover:-translate-y-0.5"
           >
-            Quero crescer com a KRIVO
+            Quero meu diagnóstico
           </WhatsAppLink>
         </nav>
 
         <div className="flex flex-col gap-[clamp(24px,2.8vw,40px)]">
-          <h1 className="max-w-[8.2em] font-display text-[clamp(44px,7.6vw,116px)] leading-none font-normal tracking-[-0.04em]">
-            Ser visto, reconhecido e lembrado.
+          <h1 className="max-w-[13em] font-display text-[clamp(36px,6.2vw,92px)] leading-[1.04] font-normal tracking-[-0.04em]">
+            Seu negócio é bom. Seu Instagram e seu Google não mostram isso.
           </h1>
-          <div className="flex max-w-[520px] flex-col gap-7">
-            <p className="text-[clamp(16px,1.3vw,19px)] leading-normal text-white text-shadow-halo">
-              A KRIVO, agência de marketing em Campinas e região, transforma negócios digitalmente
-              desestruturados em marcas com autoridade, identidade e posicionamento.
+          <div className="flex max-w-[560px] flex-col gap-7">
+            <p className="text-[clamp(17px,1.4vw,20px)] leading-normal text-white text-shadow-halo">
+              A Krivo cuida do seu Instagram, do seu perfil no Google e do seu site, para quem procura
+              seu serviço em Campinas te achar e confiar.
             </p>
-            <div className="flex flex-wrap gap-3">
-              <CtaLink position="topo" />
-              <a
-                href="#servicos"
-                className="box-border inline-flex h-[54px] items-center rounded-full border border-[rgba(255,255,255,0.6)] bg-[rgba(26,44,85,0.55)] px-[26px] text-[16px] font-medium text-white transition-[translate,background-color] duration-250 ease-[ease] hover:-translate-y-0.5"
-              >
-                Ver serviços
-              </a>
+            <div id="cta-topo" className="flex flex-col gap-3">
+              <DiagnosticoCta position="topo" className="self-start" />
+              <p className="text-[15px] text-white/85 text-shadow-halo">{CTA_NOTE}</p>
             </div>
+            {/* Prova perto da oferta: o case real logo abaixo do botão */}
+            <a
+              href="#resultados"
+              className="inline-flex min-h-11 items-center gap-2 self-start text-[15px] font-medium text-white text-shadow-halo underline decoration-white/40 underline-offset-4 hover:text-white hover:decoration-white"
+            >
+              Caso real: Barbearia Quintana, do 5º ao 2º no Google em uma semana
+              <ArrowIcon size={14} strokeWidth={1.6} />
+            </a>
             <PartnersLine />
           </div>
         </div>
