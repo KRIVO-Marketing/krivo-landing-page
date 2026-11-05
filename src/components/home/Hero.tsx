@@ -8,8 +8,7 @@ const navLinks = [
   { href: "#sobre", label: "Sobre" },
   { href: "#servicos", label: "Serviços" },
   { href: "#metodo", label: "Método" },
-  // Link oculto junto com a seção Projetos (ainda sem clientes):
-  // { href: "#projetos", label: "Projetos" },
+  { href: "#resultados", label: "Resultados" },
 ];
 
 export function Hero() {
