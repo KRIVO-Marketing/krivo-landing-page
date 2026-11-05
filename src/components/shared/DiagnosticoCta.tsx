@@ -3,7 +3,7 @@ import { DIAGNOSTICO_TEXT } from "@/lib/whatsapp";
 import { ArrowIcon } from "@/components/shared/ArrowIcon";
 import { WhatsAppLink } from "@/components/shared/WhatsAppLink";
 
-export const CTA_LABEL = "Quero meu diagnóstico gratuito";
+const CTA_LABEL = "Quero meu diagnóstico gratuito";
 export const CTA_NOTE = "20 minutos, sem custo e sem compromisso";
 
 type DiagnosticoCtaProps = {
