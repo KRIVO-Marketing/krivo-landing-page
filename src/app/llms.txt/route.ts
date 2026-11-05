@@ -67,7 +67,7 @@ ${clients.map((c) => `- [${c.name}](${SITE_URL}/#resultados): ${c.summary} Servi
 
 ## Links
 
-- [Página inicial](${SITE_URL}/): diagnóstico gratuito, resultados, serviços, método, perguntas frequentes e contato
+- [Página inicial](${SITE_URL}/): diagnóstico gratuito, resultados, como a KRIVO trabalha, perguntas frequentes e contato
 - [Diagnóstico gratuito](${SITE_URL}/#diagnostico)
 - [Resultados](${SITE_URL}/#resultados): cases de clientes, com a prova no Google e os vídeos produzidos
 `;

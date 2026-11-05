@@ -9,7 +9,7 @@ import { WhatsAppLink } from "@/components/shared/WhatsAppLink";
 const navLinks = [
   { href: "#resultados", label: "Resultados" },
   { href: "#diagnostico", label: "Diagnóstico" },
-  { href: "#servicos", label: "Serviços" },
+  { href: "#metodo", label: "Como trabalhamos" },
   { href: "#perguntas", label: "Perguntas" },
 ];
 

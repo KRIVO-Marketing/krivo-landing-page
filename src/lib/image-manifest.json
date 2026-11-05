@@ -59,33 +59,6 @@
       }
     ]
   },
-  "sobre": {
-    "width": 1410,
-    "height": 1316,
-    "variants": [
-      {
-        "w": 480,
-        "avif": "/assets/sobre-480.8032ac8f.avif",
-        "avifBytes": 88483,
-        "webp": "/assets/sobre-480.952bbaf6.webp",
-        "webpBytes": 153496
-      },
-      {
-        "w": 880,
-        "avif": "/assets/sobre-880.51cbfe53.avif",
-        "avifBytes": 331088,
-        "webp": "/assets/sobre-880.c18525e2.webp",
-        "webpBytes": 525404
-      },
-      {
-        "w": 1410,
-        "avif": "/assets/sobre-1410.e95944d8.avif",
-        "avifBytes": 656537,
-        "webp": "/assets/sobre-1410.98bb3d36.webp",
-        "webpBytes": 924326
-      }
-    ]
-  },
   "socio-1": {
     "width": 900,
     "height": 900,
